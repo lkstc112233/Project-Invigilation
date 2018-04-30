@@ -7,3 +7,6 @@
 //
 
 #include "Core.hpp"
+namespace INVIGILATION_CORE {
+    
+}

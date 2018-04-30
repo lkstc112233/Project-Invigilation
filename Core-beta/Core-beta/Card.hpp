@@ -9,6 +9,10 @@
 #ifndef Card_hpp
 #define Card_hpp
 
-#include <stdio.h>
+namespace INVIGILATION_CORE {
+    class Card{
+        
+    };
+}
 
 #endif /* Card_hpp */

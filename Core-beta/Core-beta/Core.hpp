@@ -9,6 +9,10 @@
 #ifndef Core_hpp
 #define Core_hpp
 
-#include <stdio.h>
+namespace INVIGILATION_CORE {
+    class Core{
+        
+    };
+}
 
 #endif /* Core_hpp */

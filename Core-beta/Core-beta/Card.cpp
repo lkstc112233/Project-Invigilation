@@ -7,3 +7,6 @@
 //
 
 #include "Card.hpp"
+namespace INVIGILATION_CORE {
+    
+}
