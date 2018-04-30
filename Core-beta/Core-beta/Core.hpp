@@ -11,7 +11,8 @@
 
 namespace INVIGILATION_CORE {
     class Core{
-        
+    public:
+        Core();
     };
 }
 
