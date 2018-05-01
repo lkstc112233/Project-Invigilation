@@ -6,6 +6,7 @@
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
+#include "stdafx.h"
 #include "Core.hpp"
 namespace INVIGILATION_CORE {
     Core::Core() {
