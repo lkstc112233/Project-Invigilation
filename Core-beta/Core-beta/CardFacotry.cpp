@@ -17,6 +17,7 @@ namespace INVIGILATION_CORE
     {
         struct Shared_Card : public Card {};
         auto newCard = std::make_unique<Shared_Card>();
+        newCard->m_type = ELEMENTAL;
         return newCard;
     }
 }

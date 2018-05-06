@@ -29,7 +29,11 @@ namespace INVIGILATION_CORE {
         Card();
     public:
         virtual ~Card();
+    protected:
+        CardType m_type;
+    public:
         virtual std::string toString();
+        CardType getType(){ return m_type; }
     };
 }
 

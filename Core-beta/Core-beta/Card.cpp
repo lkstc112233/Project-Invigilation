@@ -22,9 +22,20 @@ namespace INVIGILATION_CORE {
         
     }
     
+    std::string getCardTypeString(CardType type)
+    {
+        switch (type) {
+            case ELEMENTAL:
+                return "Elemental";
+            default:
+                return "Other";
+        }
+    }
     std::string Card::toString()
     {
         std::ostringstream result;
+        result << "Card:" << std::endl;
+        result << "\tType: " << getCardTypeString(getType()) << std::endl;
         return result.str();
     }
 }
