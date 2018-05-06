@@ -9,7 +9,13 @@
 #include "stdafx.h"
 #include "Core.hpp"
 namespace INVIGILATION_CORE {
-    Core::Core() {
+    Core::Core()
+    {
+        
+    }
+    
+    Core::~Core()
+    {
         
     }
 }
