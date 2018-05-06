@@ -15,8 +15,8 @@
 		0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF389209694370064602C /* Core.cpp */; };
 		0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
 		0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
-		0A8C51F0209FB09400C67B19 /* CardFacotry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFacotry.cpp */; };
-		0A8C51F1209FB09400C67B19 /* CardFacotry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFacotry.cpp */; };
+		0A8C51F0209FB09400C67B19 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
+		0A8C51F1209FB09400C67B19 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,8 +52,8 @@
 		0A8C51E3209F9D3800C67B19 /* Core-beta-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Core-beta-test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8C51E5209F9D3800C67B19 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stringable.hpp; sourceTree = "<group>"; };
-		0A8C51EE209FB09400C67B19 /* CardFacotry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CardFacotry.cpp; sourceTree = "<group>"; };
-		0A8C51EF209FB09400C67B19 /* CardFacotry.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardFacotry.hpp; sourceTree = "<group>"; };
+		0A8C51EE209FB09400C67B19 /* CardFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CardFactory.cpp; sourceTree = "<group>"; };
+		0A8C51EF209FB09400C67B19 /* CardFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardFactory.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +103,8 @@
 				0A3CF38F2096985C0064602C /* Player.cpp */,
 				0A3CF3902096985C0064602C /* Player.hpp */,
 				0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */,
-				0A8C51EE209FB09400C67B19 /* CardFacotry.cpp */,
-				0A8C51EF209FB09400C67B19 /* CardFacotry.hpp */,
+				0A8C51EE209FB09400C67B19 /* CardFactory.cpp */,
+				0A8C51EF209FB09400C67B19 /* CardFactory.hpp */,
 			);
 			path = "Core-beta";
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 				0A3CF38E209694430064602C /* Card.cpp in Sources */,
 				0A3CF38B209694370064602C /* Core.cpp in Sources */,
 				0A3CF383209690F40064602C /* main.cpp in Sources */,
-				0A8C51F0209FB09400C67B19 /* CardFacotry.cpp in Sources */,
+				0A8C51F0209FB09400C67B19 /* CardFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +210,7 @@
 				0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */,
 				0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */,
 				0A8C51E6209F9D3800C67B19 /* main.cpp in Sources */,
-				0A8C51F1209FB09400C67B19 /* CardFacotry.cpp in Sources */,
+				0A8C51F1209FB09400C67B19 /* CardFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

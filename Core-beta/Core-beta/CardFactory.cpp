@@ -7,7 +7,7 @@
 //
 
 #include "Card.hpp"
-#include "CardFacotry.hpp"
+#include "CardFactory.hpp"
 #include <memory>
 using std::unique_ptr;
 
