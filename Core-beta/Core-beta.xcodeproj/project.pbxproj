@@ -12,6 +12,9 @@
 		0A3CF38E209694430064602C /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
 		0A3CF3912096985C0064602C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
 		0A8C51E6209F9D3800C67B19 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51E5209F9D3800C67B19 /* main.cpp */; };
+		0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF389209694370064602C /* Core.cpp */; };
+		0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
+		0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -194,6 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */,
+				0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */,
+				0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */,
 				0A8C51E6209F9D3800C67B19 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
