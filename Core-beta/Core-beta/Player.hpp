@@ -11,7 +11,9 @@
 
 namespace INVIGILATION_CORE {
     class Player{
-        
+    public:
+        Player();
+        ~Player();
     };
 }
 

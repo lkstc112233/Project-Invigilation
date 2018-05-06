@@ -9,5 +9,13 @@
 #include "stdafx.h"
 #include "Player.hpp"
 namespace INVIGILATION_CORE {
+    Player::Player()
+    {
+        
+    }
     
+    Player::~Player()
+    {
+        
+    }
 }
