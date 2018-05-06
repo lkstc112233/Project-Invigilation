@@ -9,10 +9,12 @@
 #include <iostream>
 #include <fstream>
 #include "../Core-beta/Card.hpp"
+#include "../Core-beta/CardFactory.hpp"
 
 int main(int argc, const char * argv[]) {
     std::ofstream result("testResult.txt");
-    INVIGILATION_CORE::Card card;
+    auto card = INVIGILATION_CORE::CardFactory::makeCard();
     result << "Hello, Test!" << std::endl;
+    result << card->toString() << std::endl;
     return 0;
 }
