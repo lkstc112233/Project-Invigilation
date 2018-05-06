@@ -10,6 +10,7 @@
 #define CardFacotry_hpp
 
 #include <memory>
+#include <string>
 
 namespace INVIGILATION_CORE
 {
@@ -21,7 +22,7 @@ namespace INVIGILATION_CORE
     class CardFactory
     {
     public:
-        static std::unique_ptr<Card> makeCard();
+        static std::unique_ptr<Card> makeCard(int typeID = 0, std::string name = "Blank");
     };
 }
 
