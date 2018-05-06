@@ -49,6 +49,7 @@
 		0A3CF3902096985C0064602C /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		0A8C51E3209F9D3800C67B19 /* Core-beta-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Core-beta-test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8C51E5209F9D3800C67B19 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stringable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 				0A3CF38D209694430064602C /* Card.hpp */,
 				0A3CF38F2096985C0064602C /* Player.cpp */,
 				0A3CF3902096985C0064602C /* Player.hpp */,
+				0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */,
 			);
 			path = "Core-beta";
 			sourceTree = "<group>";
