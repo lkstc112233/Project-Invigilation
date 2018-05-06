@@ -13,6 +13,12 @@
 #include "Stringable.hpp"
 
 namespace INVIGILATION_CORE {
+    enum CardType
+    {
+        ELEMENTAL,
+        SORCERY,
+    };
+    
     class Card : Stringable
     {
     public:
