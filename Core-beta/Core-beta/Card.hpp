@@ -19,10 +19,15 @@ namespace INVIGILATION_CORE {
         SORCERY,
     };
     
+    class CardFactory;
+    
     class Card : Stringable
     {
     public:
+        friend CardFactory;
+    protected:
         Card();
+    public:
         virtual ~Card();
         virtual std::string toString();
     };
