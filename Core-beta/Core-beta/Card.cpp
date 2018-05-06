@@ -6,8 +6,25 @@
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
+#include <string>
+#include <sstream>
 #include "stdafx.h"
 #include "Card.hpp"
+
 namespace INVIGILATION_CORE {
+    Card::Card()
+    {
+        
+    }
     
+    Card::~Card()
+    {
+        
+    }
+    
+    std::string Card::toString()
+    {
+        std::ostringstream result;
+        return result.str();
+    }
 }

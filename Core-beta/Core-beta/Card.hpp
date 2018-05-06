@@ -9,9 +9,16 @@
 #ifndef Card_hpp
 #define Card_hpp
 
+#include <string>
+#include "Stringable.hpp"
+
 namespace INVIGILATION_CORE {
-    class Card{
-        
+    class Card : Stringable
+    {
+    public:
+        Card();
+        virtual ~Card();
+        virtual std::string toString();
     };
 }
 
