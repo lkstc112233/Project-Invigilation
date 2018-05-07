@@ -14,6 +14,7 @@
 namespace INVIGILATION_CORE {
     namespace UTILITY{
         std::string& replaceAll(std::string &input, const std::string &pattern, const std::string &replacement);
+        std::string& trimEnd(std::string &input, char toRemove);
     }
 }
 

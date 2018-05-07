@@ -27,5 +27,11 @@ namespace INVIGILATION_CORE {
             }
             return input;
         }
+        
+        std::string& trimEnd(std::string &input, char c)
+        {
+            input.erase(input.find_last_not_of(c) + 1);
+            return input;
+        }
     }
 }
