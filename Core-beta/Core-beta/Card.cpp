@@ -6,9 +6,9 @@
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
+#include "stdafx.h"
 #include <string>
 #include <sstream>
-#include "stdafx.h"
 #include "Card.hpp"
 
 namespace INVIGILATION_CORE {
