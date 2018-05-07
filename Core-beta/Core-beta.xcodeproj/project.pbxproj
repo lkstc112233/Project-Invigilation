@@ -17,6 +17,8 @@
 		0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
 		0A8C51F0209FB09400C67B19 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
 		0A8C51F1209FB09400C67B19 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
+		0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
+		0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +56,8 @@
 		0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stringable.hpp; sourceTree = "<group>"; };
 		0A8C51EE209FB09400C67B19 /* CardFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CardFactory.cpp; sourceTree = "<group>"; };
 		0A8C51EF209FB09400C67B19 /* CardFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardFactory.hpp; sourceTree = "<group>"; };
+		0A8C51F2209FD89300C67B19 /* utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
+		0A8C51F3209FD89300C67B19 /* utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utility.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */,
 				0A8C51EE209FB09400C67B19 /* CardFactory.cpp */,
 				0A8C51EF209FB09400C67B19 /* CardFactory.hpp */,
+				0A8C51F2209FD89300C67B19 /* utility.cpp */,
+				0A8C51F3209FD89300C67B19 /* utility.hpp */,
 			);
 			path = "Core-beta";
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */,
 				0A3CF3912096985C0064602C /* Player.cpp in Sources */,
 				0A3CF38E209694430064602C /* Card.cpp in Sources */,
 				0A3CF38B209694370064602C /* Core.cpp in Sources */,
@@ -206,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */,
 				0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */,
 				0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */,
 				0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */,
