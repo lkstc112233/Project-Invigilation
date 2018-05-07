@@ -24,7 +24,10 @@ namespace INVIGILATION_CORE {
     protected:
         std::vector<std::unique_ptr<Card>> hand;
         std::vector<std::unique_ptr<Card>> deck;
+    public:
+        void takeCardIntoHand(std::unique_ptr<Card> card);
         virtual std::string toString();
+
     };
 }
 

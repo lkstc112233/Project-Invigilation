@@ -24,6 +24,11 @@ namespace INVIGILATION_CORE {
         
     }
     
+    void Player::takeCardIntoHand(std::unique_ptr<Card> card)
+    {
+        hand.push_back(std::move(card));
+    }
+    
     std::string Player::toString()
     {
         std::ostringstream result;
