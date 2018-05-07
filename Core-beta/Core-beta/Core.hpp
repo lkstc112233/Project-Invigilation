@@ -14,6 +14,7 @@
 
 namespace INVIGILATION_CORE {
     class Player;
+    class Card;
     
     class Core{
     public:
@@ -21,6 +22,7 @@ namespace INVIGILATION_CORE {
         virtual ~Core();
     private:
         std::vector<std::unique_ptr<Player>> players;
+        std::vector<std::unique_ptr<Card>> pubDeck;
     };
 }
 

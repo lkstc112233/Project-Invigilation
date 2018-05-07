@@ -9,6 +9,7 @@
 #include "stdafx.h"
 #include "Core.hpp"
 #include "Player.hpp"
+#include "Card.hpp"
 
 namespace INVIGILATION_CORE {
     Core::Core()
