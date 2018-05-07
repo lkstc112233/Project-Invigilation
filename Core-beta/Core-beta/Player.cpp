@@ -37,13 +37,13 @@ namespace INVIGILATION_CORE {
         for (auto const & card : hand)
         {
             std::string cardText = card->toString();
-            result << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n\t"), '\t');
+            result << "\t\t" << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n\t\t"), '\t');
         }
         result << "\tPersonal Deck: " << std::endl;
         for (auto const & card : deck)
         {
             std::string cardText = card->toString();
-            result << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n\t"), '\t');
+            result << "\t\t" << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n\t\t"), '\t');
         }
         return result.str();
     }
