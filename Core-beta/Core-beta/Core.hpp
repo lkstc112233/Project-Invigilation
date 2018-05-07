@@ -9,11 +9,18 @@
 #ifndef Core_hpp
 #define Core_hpp
 
+#include <vector>
+#include <memory>
+
 namespace INVIGILATION_CORE {
+    class Player;
+    
     class Core{
     public:
         Core();
         virtual ~Core();
+    private:
+        std::vector<std::unique_ptr<Player>> players;
     };
 }
 

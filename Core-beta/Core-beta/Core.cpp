@@ -8,6 +8,8 @@
 
 #include "stdafx.h"
 #include "Core.hpp"
+#include "Player.hpp"
+
 namespace INVIGILATION_CORE {
     Core::Core()
     {
