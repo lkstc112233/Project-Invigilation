@@ -8,6 +8,8 @@
 
 #include "stdafx.h"
 #include "Player.hpp"
+#include "Card.hpp"
+
 namespace INVIGILATION_CORE {
     Player::Player()
     {

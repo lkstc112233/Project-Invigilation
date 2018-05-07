@@ -9,11 +9,19 @@
 #ifndef Player_hpp
 #define Player_hpp
 
+#include <memory>
+#include <vector>
+
 namespace INVIGILATION_CORE {
+    class Card;
+    
     class Player{
     public:
         Player();
-        ~Player();
+        virtual ~Player();
+    protected:
+        std::vector<std::unique_ptr<Card>> hand;
+        std::vector<std::unique_ptr<Card>> deck;
     };
 }
 
