@@ -11,17 +11,20 @@
 
 #include <memory>
 #include <vector>
+#include <string>
+#include "Stringable.hpp"
 
 namespace INVIGILATION_CORE {
     class Card;
     
-    class Player{
+    class Player : public Stringable{
     public:
         Player();
         virtual ~Player();
     protected:
         std::vector<std::unique_ptr<Card>> hand;
         std::vector<std::unique_ptr<Card>> deck;
+        virtual std::string toString();
     };
 }
 
