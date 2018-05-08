@@ -23,6 +23,7 @@ namespace INVIGILATION_CORE {
     {
     public:
         friend class CardFactory;
+        friend class CardBuilder;
     protected:
         Card();
     public:

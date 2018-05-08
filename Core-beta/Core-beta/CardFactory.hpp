@@ -23,6 +23,23 @@ namespace INVIGILATION_CORE
     public:
         static std::unique_ptr<Card> makeCard(int typeID = 0, std::string name = "Blank");
     };
+    
+    enum CardType;
+    
+    /**
+     * Friend of Card.
+     * Generates Card.
+     */
+    class CardBuilder
+    {
+    private:
+        CardType typeId;
+        std::string name;
+    public:
+        CardBuilder& setTypeId(int id);
+        CardBuilder& setName(std::string name) {this->name = name; return *this;}
+        std::unique_ptr<Card> makeCard();
+    };
 }
 
 #endif /* CardFacotry_hpp */

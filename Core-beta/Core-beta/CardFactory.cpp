@@ -21,4 +21,25 @@ namespace INVIGILATION_CORE
         newCard->m_cardName = name;
         return newCard;
     }
+    
+    CardBuilder& CardBuilder::setTypeId(int id)
+    {
+        switch(id)
+        {
+            case 0:
+            default:
+                typeId = ELEMENTAL;
+                break;
+        }
+        return *this;
+    }
+    
+    unique_ptr<Card> CardBuilder::makeCard()
+    {
+        struct Shared_Card : public Card {};
+        auto newCard = std::make_unique<Shared_Card>();
+        newCard->m_type = typeId;
+        newCard->m_cardName = name;
+        return newCard;
+    }
 }
