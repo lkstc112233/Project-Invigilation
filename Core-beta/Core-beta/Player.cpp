@@ -29,6 +29,13 @@ namespace INVIGILATION_CORE {
         hand.push_back(std::move(card));
     }
     
+    std::vector<unique_ptr<Card>> Player::loadDeck()
+    {
+        std::vector<unique_ptr<Card>> result;
+        
+        return std::move(result);
+    }
+    
     std::string Player::toString()
     {
         std::ostringstream result;

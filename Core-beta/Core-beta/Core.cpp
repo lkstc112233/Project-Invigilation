@@ -25,6 +25,11 @@ namespace INVIGILATION_CORE {
         
     }
     
+    void Core::loadDeck()
+    {
+        
+    }
+    
     std::string Core::toString()
     {
         std::ostringstream result;
