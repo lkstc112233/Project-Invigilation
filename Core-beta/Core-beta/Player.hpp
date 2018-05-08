@@ -16,7 +16,7 @@
 namespace INVIGILATION_CORE {
     class Card;
     
-    class Player : public Stringable{
+    class Player : public Stringable {
     public:
         Player();
         virtual ~Player();
