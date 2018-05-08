@@ -9,7 +9,6 @@
 #include "stdafx.h"
 #include "Card.hpp"
 #include "CardFactory.hpp"
-using std::unique_ptr;
 
 namespace INVIGILATION_CORE
 {

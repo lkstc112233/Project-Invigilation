@@ -24,7 +24,7 @@ namespace INVIGILATION_CORE {
         
     }
     
-    void Player::takeCardIntoHand(std::unique_ptr<Card> card)
+    void Player::takeCardIntoHand(unique_ptr<Card> card)
     {
         hand.push_back(std::move(card));
     }

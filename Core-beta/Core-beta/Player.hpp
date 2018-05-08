@@ -21,10 +21,10 @@ namespace INVIGILATION_CORE {
         Player();
         virtual ~Player();
     protected:
-        std::vector<std::unique_ptr<Card>> hand;
-        std::vector<std::unique_ptr<Card>> deck;
+        std::vector<unique_ptr<Card>> hand;
+        std::vector<unique_ptr<Card>> deck;
     public:
-        void takeCardIntoHand(std::unique_ptr<Card> card);
+        void takeCardIntoHand(unique_ptr<Card> card);
         virtual std::string toString();
 
     };

@@ -28,7 +28,7 @@ namespace INVIGILATION_CORE
     public:
         CardBuilder& setTypeId(int id);
         CardBuilder& setName(std::string name) {this->name = name; return *this;}
-        std::unique_ptr<Card> makeCard();
+        unique_ptr<Card> makeCard();
     };
 }
 

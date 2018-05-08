@@ -8,3 +8,4 @@
 #endif
 
 #include <memory>
+using std::unique_ptr;
