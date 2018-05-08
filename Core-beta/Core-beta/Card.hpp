@@ -19,12 +19,10 @@ namespace INVIGILATION_CORE {
         SORCERY,
     };
     
-    class CardFactory;
-    
     class Card : Stringable
     {
     public:
-        friend CardFactory;
+        friend class CardFactory;
     protected:
         Card();
     public:
