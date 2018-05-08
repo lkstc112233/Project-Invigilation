@@ -16,9 +16,12 @@
 int main(int argc, const char * argv[]) {
     std::ofstream result("testResult.txt");
     INVIGILATION_CORE::Player player;
-    auto card = INVIGILATION_CORE::CardFactory::makeCard();
+    INVIGILATION_CORE::CardBuilder cardBuilder;
+    cardBuilder.setTypeId(0).setName("Fire");
+    auto card = cardBuilder.makeCard();
     player.takeCardIntoHand(std::move(card));
-    card = INVIGILATION_CORE::CardFactory::makeCard();
+    cardBuilder.setName("Ice");
+    card = cardBuilder.makeCard();
     player.takeCardIntoHand(std::move(card));
     result << "Hello, Test!" << std::endl;
     result << player.toString() << std::endl;

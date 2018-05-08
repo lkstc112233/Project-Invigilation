@@ -13,15 +13,6 @@ using std::unique_ptr;
 
 namespace INVIGILATION_CORE
 {
-    unique_ptr<Card> CardFactory::makeCard(int id, std::string name)
-    {
-        struct Shared_Card : public Card {};
-        auto newCard = std::make_unique<Shared_Card>();
-        newCard->m_type = ELEMENTAL;
-        newCard->m_cardName = name;
-        return newCard;
-    }
-    
     CardBuilder& CardBuilder::setTypeId(int id)
     {
         switch(id)
