@@ -21,45 +21,27 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Card.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Core.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Stringable.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="utility.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CardFactory.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Core.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Card.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="utility.cpp">
+    <ClCompile Include="..\Core-beta\Player.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CardFactory.cpp">
+    <ClCompile Include="..\Core-beta\utility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core-beta\Card.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core-beta\CardFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core-beta\Core.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

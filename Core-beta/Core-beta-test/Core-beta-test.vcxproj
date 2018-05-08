@@ -12,9 +12,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{37D8E773-9AE5-42DD-8C01-EC55B9FDBA3D}</ProjectGuid>
+    <ProjectGuid>{320C4AF6-1D0F-45E9-A2FA-9A19463C983F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Corebeta</RootNamespace>
+    <RootNamespace>Corebetatest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -82,26 +82,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Card.hpp" />
-    <ClInclude Include="CardFactory.hpp" />
-    <ClInclude Include="Core.hpp" />
-    <ClInclude Include="Player.hpp" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Stringable.hpp" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="utility.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Card.cpp" />
-    <ClCompile Include="CardFactory.cpp" />
-    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="..\Core-beta\Card.cpp" />
+    <ClCompile Include="..\Core-beta\CardFactory.cpp" />
+    <ClCompile Include="..\Core-beta\Core.cpp" />
+    <ClCompile Include="..\Core-beta\Player.cpp" />
+    <ClCompile Include="..\Core-beta\utility.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="utility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
