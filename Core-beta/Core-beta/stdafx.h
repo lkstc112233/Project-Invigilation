@@ -7,4 +7,4 @@
 #include <tchar.h>
 #endif
 
-
+#include <memory>

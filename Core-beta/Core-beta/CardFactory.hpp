@@ -9,7 +9,6 @@
 #ifndef CardFacotry_hpp
 #define CardFacotry_hpp
 
-#include <memory>
 #include <string>
 
 namespace INVIGILATION_CORE

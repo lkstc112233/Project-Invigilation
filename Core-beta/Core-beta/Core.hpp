@@ -10,7 +10,6 @@
 #define Core_hpp
 
 #include <vector>
-#include <memory>
 
 namespace INVIGILATION_CORE {
     class Player;

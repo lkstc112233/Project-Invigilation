@@ -9,7 +9,6 @@
 #ifndef Player_hpp
 #define Player_hpp
 
-#include <memory>
 #include <vector>
 #include <string>
 #include "Stringable.hpp"
