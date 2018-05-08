@@ -12,6 +12,7 @@
 #include "Player.hpp"
 #include "Card.hpp"
 #include "utility.hpp"
+#include "CardFactory.hpp"
 using std::unique_ptr;
 
 namespace INVIGILATION_CORE {
@@ -34,7 +35,7 @@ namespace INVIGILATION_CORE {
     {
         std::vector<unique_ptr<Card>> result;
         
-        return std::move(result);
+        return result;
     }
     
     std::string Player::toString()
