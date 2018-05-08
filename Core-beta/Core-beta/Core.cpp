@@ -25,9 +25,17 @@ namespace INVIGILATION_CORE {
         
     }
     
-    void Core::loadDeck()
+    void Core::createPlayers(int count)
     {
-        
+        // remove any existing player
+        for (int i = 0; i < count; ++i)
+        {
+            auto player = std::make_unique<Player>();
+            auto deck = player->loadDeck();
+            for (auto& pnt : deck)
+                pubDeck.push_back(std::move(pnt));
+            players.push_back(std::move(player));
+        }
     }
     
     std::string Core::toString()

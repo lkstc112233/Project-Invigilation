@@ -20,7 +20,7 @@ namespace INVIGILATION_CORE {
     public:
         Core();
         virtual ~Core();
-        void loadDeck();
+        void createPlayers(int count = 2);
     private:
         std::vector<std::unique_ptr<Player>> players;
         std::vector<std::unique_ptr<Card>> pubDeck;
