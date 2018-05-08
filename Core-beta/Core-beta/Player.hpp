@@ -26,7 +26,6 @@ namespace INVIGILATION_CORE {
     public:
         void takeCardIntoHand(unique_ptr<Card> card);
         virtual std::string toString();
-
     };
 }
 
