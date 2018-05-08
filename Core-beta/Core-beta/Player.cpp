@@ -12,6 +12,7 @@
 #include "Player.hpp"
 #include "Card.hpp"
 #include "utility.hpp"
+using std::unique_ptr;
 
 namespace INVIGILATION_CORE {
     Player::Player()
@@ -24,7 +25,7 @@ namespace INVIGILATION_CORE {
         
     }
     
-    void Player::takeCardIntoHand(unique_ptr<Card> card)
+    void Player::takeCardIntoHand(std::unique_ptr<Card> card)
     {
         hand.push_back(std::move(card));
     }

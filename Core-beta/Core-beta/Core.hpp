@@ -22,8 +22,8 @@ namespace INVIGILATION_CORE {
         virtual ~Core();
         void loadDeck();
     private:
-        std::vector<unique_ptr<Player>> players;
-        std::vector<unique_ptr<Card>> pubDeck;
+        std::vector<std::unique_ptr<Player>> players;
+        std::vector<std::unique_ptr<Card>> pubDeck;
     public:
         virtual std::string toString();
     };
