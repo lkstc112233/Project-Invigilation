@@ -10,6 +10,7 @@
 #define Core_hpp
 
 #include <vector>
+#include "Stringable.hpp"
 
 namespace INVIGILATION_CORE {
     class Player;
@@ -22,6 +23,8 @@ namespace INVIGILATION_CORE {
     private:
         std::vector<std::unique_ptr<Player>> players;
         std::vector<std::unique_ptr<Card>> pubDeck;
+    public:
+        virtual std::string toString();
     };
 }
 
