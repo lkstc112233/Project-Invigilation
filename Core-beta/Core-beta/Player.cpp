@@ -9,6 +9,8 @@
 #include "stdafx.h"
 #include <string>
 #include <sstream>
+#include <algorithm>
+#include <random>
 #include "Player.hpp"
 #include "Card.hpp"
 #include "utility.hpp"
@@ -40,8 +42,46 @@ namespace INVIGILATION_CORE {
     
     std::vector<unique_ptr<Card>> Player::loadDeck()
     {
+        deck.clear();
         std::vector<unique_ptr<Card>> result;
-        
+        int deckId = rand() % 4;
+        CardBuilder builder_fire;
+        CardBuilder builder_ice;
+        CardBuilder builder_aero;
+        CardBuilder builder_earth;
+        builder_fire.setTypeId(0).setName("Fire");
+        builder_ice.setTypeId(0).setName("Ice");
+        builder_aero.setTypeId(0).setName("Aero");
+        builder_earth.setTypeId(0).setName("Earth");
+        for (int i = 0; i < 20; ++i)
+        {
+            switch(deckId)
+            {
+                case 0:
+                    result.push_back(builder_fire.makeCard());
+                    deck.push_back(builder_fire.makeCard());
+                    break;
+                case 1:
+                    result.push_back(builder_ice.makeCard());
+                    deck.push_back(builder_ice.makeCard());
+                    break;
+                case 2:
+                    result.push_back(builder_aero.makeCard());
+                    deck.push_back(builder_aero.makeCard());
+                    break;
+                case 3:
+                    result.push_back(builder_earth.makeCard());
+                    deck.push_back(builder_earth.makeCard());
+                    break;
+            }
+        }
+        for (int i = 0; i < 5; ++i)
+        {
+            deck.push_back(builder_fire.makeCard());
+            deck.push_back(builder_ice.makeCard());
+            deck.push_back(builder_aero.makeCard());
+            deck.push_back(builder_earth.makeCard());
+        }
         return result;
     }
     
