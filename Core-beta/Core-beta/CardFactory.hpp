@@ -23,8 +23,8 @@ namespace INVIGILATION_CORE
     class CardBuilder
     {
     private:
-        CardType typeId;
-        std::string name;
+        CardType typeId = ELEMENTAL;
+        std::string name = "Void";
     public:
         CardBuilder& setTypeId(int id);
         CardBuilder& setName(std::string name) {this->name = name; return *this;}
