@@ -7,6 +7,7 @@
 //
 
 #include "stdafx.h"
+#include <sstream>
 #include <algorithm>
 #include <random>
 
@@ -14,8 +15,6 @@
 #include "Player.hpp"
 #include "Card.hpp"
 #include "utility.hpp"
-
-#include <sstream>
 
 namespace INVIGILATION_CORE {
     Core::Core()
