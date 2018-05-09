@@ -7,6 +7,9 @@
 //
 
 #include "stdafx.h"
+#include <algorithm>
+#include <random>
+
 #include "Core.hpp"
 #include "Player.hpp"
 #include "Card.hpp"
@@ -34,8 +37,12 @@ namespace INVIGILATION_CORE {
             auto deck = player->loadDeck();
             for (auto& pnt : deck)
                 pubDeck.push_back(std::move(pnt));
+            player->shuffleDeck();
             players.push_back(std::move(player));
         }
+        std::random_device rd;
+        std::mt19937 g(rd());
+        std::shuffle(pubDeck.begin(), pubDeck.end(), g);
     }
     
     std::string Core::toString()
