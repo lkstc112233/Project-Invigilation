@@ -12,18 +12,13 @@
 #include "../Core-beta/Card.hpp"
 #include "../Core-beta/Player.hpp"
 #include "../Core-beta/CardFactory.hpp"
+#include "../Core-beta/Core.hpp"
 
 int main(int argc, const char * argv[]) {
     std::ofstream result("testResult.txt");
-    INVIGILATION_CORE::Player player;
-    INVIGILATION_CORE::CardBuilder cardBuilder;
-    cardBuilder.setTypeId(0).setName("Fire");
-    auto card = cardBuilder.makeCard();
-    player.takeCardIntoHand(std::move(card));
-    cardBuilder.setName("Ice");
-    card = cardBuilder.makeCard();
-    player.takeCardIntoHand(std::move(card));
+    INVIGILATION_CORE::Core core;
+    core.createPlayers();
     result << "Hello, Test!" << std::endl;
-    result << player.toString() << std::endl;
+    result << core.toString() << std::endl;
     return 0;
 }
