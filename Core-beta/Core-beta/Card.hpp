@@ -22,7 +22,6 @@ namespace INVIGILATION_CORE {
     class Card : Stringable
     {
     public:
-        friend class CardFactory;
         friend class CardBuilder;
     protected:
         Card();
