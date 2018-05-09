@@ -89,17 +89,17 @@ namespace INVIGILATION_CORE {
     {
         std::ostringstream result;
         result << "Player:" << std::endl;
-        result << "\tHand: " << std::endl;
+        result << "  Hand: " << std::endl;
         for (auto const & card : hand)
         {
             std::string cardText = card->toString();
-            result << "\t\t" << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n\t\t"), '\t');
+            result << "    " << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n    "), ' ');
         }
-        result << "\tPersonal Deck: " << std::endl;
+        result << "  Personal Deck: " << std::endl;
         for (auto const & card : deck)
         {
             std::string cardText = card->toString();
-            result << "\t\t" << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n\t\t"), '\t');
+            result << "    " << UTILITY::trimEnd(UTILITY::replaceAll(cardText, "\n", "\n    "), ' ');
         }
         return result.str();
     }
