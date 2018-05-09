@@ -19,6 +19,7 @@ namespace INVIGILATION_CORE {
     public:
         Controller();
         virtual ~Controller();
+        virtual std::unique_ptr<Action> action() = 0;
     };
 }
 
