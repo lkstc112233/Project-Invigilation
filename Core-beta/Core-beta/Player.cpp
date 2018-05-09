@@ -31,6 +31,13 @@ namespace INVIGILATION_CORE {
         hand.push_back(std::move(card));
     }
     
+    void Player::shuffleDeck()
+    {
+        std::random_device rd;
+        std::mt19937 g(rd());
+        std::shuffle(deck.begin(), deck.end(),g);
+    }
+    
     std::vector<unique_ptr<Card>> Player::loadDeck()
     {
         std::vector<unique_ptr<Card>> result;
