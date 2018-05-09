@@ -11,6 +11,12 @@
 #include "CardFactory.hpp"
 using std::unique_ptr;
 
+static std::atomic<long> uniqueId;
+static long getId()
+{
+    return uniqueId.fetch_add(1, std::memory_order_relaxed);
+}
+
 namespace INVIGILATION_CORE
 {
     CardBuilder& CardBuilder::setTypeId(int id)
@@ -29,6 +35,7 @@ namespace INVIGILATION_CORE
     {
         struct Shared_Card : public Card {};
         auto newCard = std::make_unique<Shared_Card>();
+        newCard->m_cardId = getId();
         newCard->m_type = typeId;
         newCard->m_cardName = name;
         return newCard;

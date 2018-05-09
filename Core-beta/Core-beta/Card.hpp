@@ -28,10 +28,12 @@ namespace INVIGILATION_CORE {
     public:
         virtual ~Card();
     protected:
+        long m_cardId;
         CardType m_type;
         std::string m_cardName;
     public:
         virtual std::string toString();
+        long getId() { return m_cardId; }
         CardType getType() { return m_type; }
         std::string getCardName() { return m_cardName; }
     };

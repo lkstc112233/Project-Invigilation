@@ -35,6 +35,7 @@ namespace INVIGILATION_CORE {
     {
         std::ostringstream result;
         result << "Card:" << std::endl;
+        result << "  Id: " << getId() << std::endl;
         result << "  Type: " << getCardTypeString(getType()) << std::endl;
         result << "  Name: " << getCardName() << std::endl;
         return result.str();
