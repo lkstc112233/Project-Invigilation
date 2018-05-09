@@ -9,6 +9,8 @@
 #ifndef Action_hpp
 #define Action_hpp
 
+#include <vector>
+
 namespace INVIGILATION_CORE {
     // Used for action.
     enum ActionType
@@ -28,6 +30,7 @@ namespace INVIGILATION_CORE {
         ActionType m_type;
     public:
         ActionType getType() { return m_type; }
+        std::vector<int> info;
     };
 }
 
