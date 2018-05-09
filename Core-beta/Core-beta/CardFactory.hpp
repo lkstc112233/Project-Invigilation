@@ -23,6 +23,8 @@ namespace INVIGILATION_CORE
     class CardBuilder
     {
     public:
+        // Change a card's id to a new one.
+        // Use this to make a card a new one.
         static void reId(Card &card);
     private:
         CardType typeId = ELEMENTAL;
