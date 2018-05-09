@@ -10,6 +10,13 @@
 #define Action_hpp
 
 namespace INVIGILATION_CORE {
+    // Used for action.
+    enum ActionType
+    {
+        RuleAction,
+        PlayCard,
+    };
+
     // This is an interface for controller.
     // It fires Action to push forward game process.
     class Action
@@ -17,6 +24,10 @@ namespace INVIGILATION_CORE {
     public:
         Action();
         virtual ~Action();
+    private:
+        ActionType m_type;
+    public:
+        ActionType getType() { return m_type; }
     };
 }
 
