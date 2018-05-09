@@ -19,6 +19,10 @@
 		0A8C51F1209FB09400C67B19 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
 		0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
 		0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
+		0A8C51F820A39F4E00C67B19 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F620A39F4E00C67B19 /* Controller.cpp */; };
+		0A8C51F920A39F4E00C67B19 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F620A39F4E00C67B19 /* Controller.cpp */; };
+		0A8C51FC20A3A27D00C67B19 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FA20A3A27D00C67B19 /* Action.cpp */; };
+		0A8C51FD20A3A27D00C67B19 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FA20A3A27D00C67B19 /* Action.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +62,10 @@
 		0A8C51EF209FB09400C67B19 /* CardFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardFactory.hpp; sourceTree = "<group>"; };
 		0A8C51F2209FD89300C67B19 /* utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = utility.cpp; sourceTree = "<group>"; };
 		0A8C51F3209FD89300C67B19 /* utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utility.hpp; sourceTree = "<group>"; };
+		0A8C51F620A39F4E00C67B19 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		0A8C51F720A39F4E00C67B19 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
+		0A8C51FA20A3A27D00C67B19 /* Action.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
+		0A8C51FB20A3A27D00C67B19 /* Action.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,10 @@
 				0A8C51EF209FB09400C67B19 /* CardFactory.hpp */,
 				0A8C51F2209FD89300C67B19 /* utility.cpp */,
 				0A8C51F3209FD89300C67B19 /* utility.hpp */,
+				0A8C51F620A39F4E00C67B19 /* Controller.cpp */,
+				0A8C51F720A39F4E00C67B19 /* Controller.hpp */,
+				0A8C51FA20A3A27D00C67B19 /* Action.cpp */,
+				0A8C51FB20A3A27D00C67B19 /* Action.hpp */,
 			);
 			path = "Core-beta";
 			sourceTree = "<group>";
@@ -201,10 +213,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */,
+				0A8C51FC20A3A27D00C67B19 /* Action.cpp in Sources */,
 				0A3CF3912096985C0064602C /* Player.cpp in Sources */,
 				0A3CF38E209694430064602C /* Card.cpp in Sources */,
 				0A3CF38B209694370064602C /* Core.cpp in Sources */,
 				0A3CF383209690F40064602C /* main.cpp in Sources */,
+				0A8C51F820A39F4E00C67B19 /* Controller.cpp in Sources */,
 				0A8C51F0209FB09400C67B19 /* CardFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,10 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */,
+				0A8C51FD20A3A27D00C67B19 /* Action.cpp in Sources */,
 				0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */,
 				0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */,
 				0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */,
 				0A8C51E6209F9D3800C67B19 /* main.cpp in Sources */,
+				0A8C51F920A39F4E00C67B19 /* Controller.cpp in Sources */,
 				0A8C51F1209FB09400C67B19 /* CardFactory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
