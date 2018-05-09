@@ -29,7 +29,9 @@ namespace INVIGILATION_CORE {
     
     void Core::createPlayers(int count)
     {
-        // remove any existing player
+        // remove any existing player, and any existing deck.
+        players.clear();
+        pubDeck.clear();
         for (int i = 0; i < count; ++i)
         {
             auto player = std::make_unique<Player>();
