@@ -22,6 +22,8 @@ namespace INVIGILATION_CORE
      */
     class CardBuilder
     {
+    public:
+        static void reId(Card &card);
     private:
         CardType typeId = ELEMENTAL;
         std::string name = "Void";

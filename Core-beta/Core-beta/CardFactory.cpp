@@ -19,6 +19,11 @@ static long getId()
 
 namespace INVIGILATION_CORE
 {
+    void CardBuilder::reId(Card &card)
+    {
+        card.m_cardId = getId();
+    }
+    
     CardBuilder& CardBuilder::setTypeId(int id)
     {
         switch(id)
