@@ -86,6 +86,7 @@ namespace INVIGILATION_CORE {
     {
         std::ostringstream result;
         result << "Player:" << std::endl;
+        result << "  Id: " << getId() << std::endl;
         result << "  Hand: " << std::endl;
         for (auto const & card : hand)
         {

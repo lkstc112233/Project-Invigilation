@@ -28,6 +28,7 @@ namespace INVIGILATION_CORE {
         std::vector<std::unique_ptr<Card>> loadDeck();
         void shuffleDeck();
         void takeCardIntoHand(std::unique_ptr<Card> card);
+        long getId() { return id; }
         virtual std::string toString();
     };
 }
