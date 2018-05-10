@@ -20,9 +20,8 @@ namespace INVIGILATION_CORE {
         template<typename RandomAccessIterator>
         void shuffle(RandomAccessIterator begin, RandomAccessIterator end)
         {
-            std::random_device rd;
-            std::mt19937 g(rd());
-            std::shuffle(begin, end, g);
+            extern std::mt19937 RandomDevice19937ForShuffling;
+            std::shuffle(begin, end, RandomDevice19937ForShuffling);
         }
         class IDGenerator
         {

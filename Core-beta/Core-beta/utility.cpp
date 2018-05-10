@@ -13,6 +13,9 @@
 
 namespace INVIGILATION_CORE {
     namespace UTILITY{
+        std::random_device RandomDeviceForShuffling;
+        std::mt19937 RandomDevice19937ForShuffling(RandomDeviceForShuffling());
+        
         /**
          * Replaces all occurrence of pattern in input with replacement.
          */
