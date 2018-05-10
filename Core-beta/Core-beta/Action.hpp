@@ -31,6 +31,7 @@ namespace INVIGILATION_CORE {
         ActionType m_type;
     public:
         ActionType getType() { return m_type; }
+        ActionType setType(ActionType type) { auto temp = m_type; m_type = type; return temp; }
         std::vector<int> info;
     };
 }
