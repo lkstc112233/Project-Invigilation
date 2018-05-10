@@ -11,10 +11,49 @@
 #include "Action.hpp"
 
 #include <iostream>
+#include <iomanip>
+#include <ios>
 using std::cout;
 using std::endl;
 
 namespace INVIGILATION_CORE {
+    int ConsoleInterface::MenuItem::interact()
+    {
+        int result = -1;
+        cout << "Please make a selection below:" << endl << std::left;
+        int i = 1;
+        for (const auto& t: selections)
+        {
+            cout << " " << std::setw(3) << i << ": " << t << endl;
+            i += 1;
+        }
+        cout << " >" << std::right;
+        while (!(std::cin >> result))
+        {
+            cout << "Invalid input. Please try again." << endl << " >";
+            std::cin.clear();
+            std::cin.ignore();
+        }
+        return result;
+    }
+    
+    void ConsoleInterface::MenuItem::addCancel(const std::string &hint)
+    {
+        addItem(hint, -1);
+    }
+
+    void ConsoleInterface::MenuItem::addItem(const std::string &hint, int result)
+    {
+        selections.push_back(hint);
+        returnValues.push_back(std::make_unique<MenuItemAction>(result));
+    }
+    
+    void ConsoleInterface::MenuItem::addItem(const std::string &hint, std::unique_ptr<MenuItem> input)
+    {
+        selections.push_back(hint);
+        returnValues.push_back(std::make_unique<MenuItemAction>(std::move(input)));
+    }
+    
     ConsoleInterface::ConsoleInterface()
     {
         
