@@ -56,7 +56,13 @@ namespace INVIGILATION_CORE {
     
     ConsoleInterface::ConsoleInterface()
     {
-        
+        defaultActionSelection = std::make_unique<MenuItem>();
+        auto actionSubMenu = std::make_unique<MenuItem>();
+        actionSubMenu->addItem("Elemental Attack", 1);
+        actionSubMenu->addItem("Elemental Communicate", 2);
+        actionSubMenu->addCancel("Cancel");
+        defaultActionSelection->addItem("Elemental Related Action", std::move(actionSubMenu));
+        actionSubMenu->addCancel("Pass Turn");
     }
     
     ConsoleInterface::~ConsoleInterface()
@@ -67,7 +73,18 @@ namespace INVIGILATION_CORE {
     std::unique_ptr<Action> ConsoleInterface::action()
     {
         auto decision = std::make_unique<Action>();
-        cout << "Make a decision: " << endl << "  1: Elemental Stuff" << endl << "  2: Play a card from hand" << endl << " >";
+        int selection = defaultActionSelection->interact();
+        switch (selection) {
+            case 1:
+                decision->setType(ElementalAction);
+                break;
+            case 2:
+                decision->setType(ElementalAction);
+                break;
+            case -1:
+            default:
+                decision->setType(Nothing);
+        }
         return decision;
     }
     
