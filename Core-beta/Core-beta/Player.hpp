@@ -22,6 +22,8 @@ namespace INVIGILATION_CORE {
         virtual ~Player();
     protected:
         long id;
+        int life;
+        int initialLife;
         std::vector<std::unique_ptr<Card>> hand;
         std::vector<std::unique_ptr<Card>> deck;
     public:
@@ -29,6 +31,7 @@ namespace INVIGILATION_CORE {
         void shuffleDeck();
         void takeCardIntoHand(std::unique_ptr<Card> card);
         long getId() { return id; }
+        int getLife() { return life; }
         virtual std::string toString();
     };
 }

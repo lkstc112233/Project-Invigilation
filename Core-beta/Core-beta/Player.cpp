@@ -18,8 +18,9 @@ using std::unique_ptr;
 namespace INVIGILATION_CORE {
     Player::Player(int idinput)
     : id(idinput)
+    , initialLife(10)
     {
-        
+        life = initialLife;
     }
     
     Player::~Player()
@@ -87,6 +88,7 @@ namespace INVIGILATION_CORE {
         std::ostringstream result;
         result << "Player:" << std::endl;
         result << "  Id: " << getId() << std::endl;
+        result << "  Life: " << getLife() << std::endl;
         result << "  Hand: " << std::endl;
         for (auto const & card : hand)
         {
