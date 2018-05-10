@@ -15,6 +15,7 @@
 #include "Player.hpp"
 #include "Card.hpp"
 #include "utility.hpp"
+#include "CardFactory.hpp"
 
 namespace INVIGILATION_CORE {
     Core::Core()
@@ -34,7 +35,7 @@ namespace INVIGILATION_CORE {
         pubDeck.clear();
         for (int i = 0; i < count; ++i)
         {
-            auto player = std::make_unique<Player>();
+            auto player = std::make_unique<Player>(CardBuilder::geterateId());
             auto deck = player->loadDeck();
             for (auto& pnt : deck)
                 pubDeck.push_back(std::move(pnt));

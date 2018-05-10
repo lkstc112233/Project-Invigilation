@@ -26,6 +26,9 @@ namespace INVIGILATION_CORE
         // Change a card's id to a new one.
         // Use this to make a card a new one.
         static void reId(Card &card);
+        // Get a new ID.
+        // However it can be used to cards, it also can be used to identify other any things.
+        static long geterateId();
     private:
         CardType typeId = ELEMENTAL;
         std::string name = "Void";

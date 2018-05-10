@@ -24,6 +24,11 @@ namespace INVIGILATION_CORE
         card.m_cardId = getId();
     }
     
+    long CardBuilder::geterateId()
+    {
+        return getId();
+    }
+    
     CardBuilder& CardBuilder::setTypeId(int id)
     {
         switch(id)

@@ -18,7 +18,8 @@
 using std::unique_ptr;
 
 namespace INVIGILATION_CORE {
-    Player::Player()
+    Player::Player(int idinput)
+    : id(idinput)
     {
         
     }

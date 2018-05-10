@@ -18,9 +18,10 @@ namespace INVIGILATION_CORE {
     
     class Player : public Stringable {
     public:
-        Player();
+        Player(int id);
         virtual ~Player();
     protected:
+        long id;
         std::vector<std::unique_ptr<Card>> hand;
         std::vector<std::unique_ptr<Card>> deck;
     public:
