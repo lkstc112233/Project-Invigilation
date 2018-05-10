@@ -8,8 +8,6 @@
 
 #include "stdafx.h"
 #include <sstream>
-#include <algorithm>
-#include <random>
 
 #include "Core.hpp"
 #include "Player.hpp"
@@ -42,9 +40,7 @@ namespace INVIGILATION_CORE {
             player->shuffleDeck();
             players.push_back(std::move(player));
         }
-        std::random_device rd;
-        std::mt19937 g(rd());
-        std::shuffle(pubDeck.begin(), pubDeck.end(), g);
+        UTILITY::shuffle(pubDeck.begin(), pubDeck.end());
     }
     
     std::string Core::toString()

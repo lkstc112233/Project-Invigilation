@@ -9,8 +9,6 @@
 #include "stdafx.h"
 #include <string>
 #include <sstream>
-#include <algorithm>
-#include <random>
 #include "Player.hpp"
 #include "Card.hpp"
 #include "utility.hpp"
@@ -36,9 +34,7 @@ namespace INVIGILATION_CORE {
     
     void Player::shuffleDeck()
     {
-        std::random_device rd;
-        std::mt19937 g(rd());
-        std::shuffle(deck.begin(), deck.end(),g);
+        UTILITY::shuffle(deck.begin(), deck.end());
     }
     
     std::vector<unique_ptr<Card>> Player::loadDeck()
