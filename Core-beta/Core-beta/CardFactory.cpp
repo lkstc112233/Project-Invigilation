@@ -9,24 +9,14 @@
 #include "stdafx.h"
 #include "Card.hpp"
 #include "CardFactory.hpp"
+#include "utility.hpp"
 using std::unique_ptr;
-
-static std::atomic<long> uniqueId;
-static long getId()
-{
-    return uniqueId.fetch_add(1, std::memory_order_relaxed);
-}
 
 namespace INVIGILATION_CORE
 {
     void CardBuilder::reId(Card &card)
     {
-        card.m_cardId = getId();
-    }
-    
-    long CardBuilder::geterateId()
-    {
-        return getId();
+        card.m_cardId = UTILITY::IDGenerator::getId();
     }
     
     CardBuilder& CardBuilder::setTypeId(int id)
@@ -45,7 +35,7 @@ namespace INVIGILATION_CORE
     {
         struct Shared_Card : public Card {};
         auto newCard = std::make_unique<Shared_Card>();
-        newCard->m_cardId = getId();
+        newCard->m_cardId = UTILITY::IDGenerator::getId();
         newCard->m_type = typeId;
         newCard->m_cardName = name;
         return newCard;

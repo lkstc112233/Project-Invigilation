@@ -8,6 +8,7 @@
 
 #include "stdafx.h"
 #include "utility.hpp"
+#include <atomic>
 
 
 namespace INVIGILATION_CORE {
@@ -33,6 +34,12 @@ namespace INVIGILATION_CORE {
         {
             input.erase(input.find_last_not_of(c) + 1);
             return input;
+        }
+        
+        std::atomic<long> IDGenerator::idGenerator;
+        long IDGenerator::getId()
+        {
+            return idGenerator.fetch_add(1, std::memory_order_relaxed);
         }
     }
 }
