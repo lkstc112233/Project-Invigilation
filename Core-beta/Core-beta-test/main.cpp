@@ -14,11 +14,16 @@
 #include "../Core-beta/CardFactory.hpp"
 #include "../Core-beta/Core.hpp"
 
-int main(int argc, const char * argv[]) {
+void deckBuildingTest()
+{
     std::ofstream result("testResult.txt");
     INVIGILATION_CORE::Core core;
     core.createPlayers();
     result << "Hello, Test!" << std::endl;
     result << core.toString() << std::endl;
+}
+
+int main(int argc, const char * argv[]) {
     return 0;
 }
+
