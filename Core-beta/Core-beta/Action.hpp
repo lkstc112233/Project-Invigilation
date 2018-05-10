@@ -15,7 +15,8 @@ namespace INVIGILATION_CORE {
     // Used for action.
     enum ActionType
     {
-        RuleAction,
+        ElementalAction,
+        DamageReduction,
         PlayCard,
     };
 
