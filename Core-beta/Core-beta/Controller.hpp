@@ -13,6 +13,7 @@ namespace INVIGILATION_CORE {
     // This is an interface for controller.
     // It fires Action to push forward game process.
     class Action;
+    class Status;
     
     class Controller
     {
@@ -20,6 +21,7 @@ namespace INVIGILATION_CORE {
         Controller();
         virtual ~Controller();
         virtual std::unique_ptr<Action> action() = 0;
+        virtual void notify(const Status& update) = 0;
     };
 }
 

@@ -14,6 +14,7 @@
 namespace INVIGILATION_CORE {
     // This is an interface for controller.
     class Action;
+    class Status;
     
     class ConsoleInterface: public Controller
     {
@@ -21,6 +22,7 @@ namespace INVIGILATION_CORE {
         ConsoleInterface();
         virtual ~ConsoleInterface();
         virtual std::unique_ptr<Action> action();
+        virtual void notify(const Status& status);
     };
 }
 

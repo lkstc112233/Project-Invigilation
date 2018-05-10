@@ -25,6 +25,8 @@
 		0A8C51FD20A3A27D00C67B19 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FA20A3A27D00C67B19 /* Action.cpp */; };
 		0A8C520020A3CD1A00C67B19 /* ConsoleInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */; };
 		0A8C520120A3CD1A00C67B19 /* ConsoleInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */; };
+		0A8C520420A4D4E300C67B19 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C520220A4D4E300C67B19 /* Status.cpp */; };
+		0A8C520520A4D4E300C67B19 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C520220A4D4E300C67B19 /* Status.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +72,8 @@
 		0A8C51FB20A3A27D00C67B19 /* Action.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
 		0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleInterface.cpp; sourceTree = "<group>"; };
 		0A8C51FF20A3CD1A00C67B19 /* ConsoleInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConsoleInterface.hpp; sourceTree = "<group>"; };
+		0A8C520220A4D4E300C67B19 /* Status.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Status.cpp; sourceTree = "<group>"; };
+		0A8C520320A4D4E300C67B19 /* Status.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 				0A8C51FB20A3A27D00C67B19 /* Action.hpp */,
 				0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */,
 				0A8C51FF20A3CD1A00C67B19 /* ConsoleInterface.hpp */,
+				0A8C520220A4D4E300C67B19 /* Status.cpp */,
+				0A8C520320A4D4E300C67B19 /* Status.hpp */,
 			);
 			path = "Core-beta";
 			sourceTree = "<group>";
@@ -221,6 +227,7 @@
 				0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */,
 				0A8C51FC20A3A27D00C67B19 /* Action.cpp in Sources */,
 				0A3CF3912096985C0064602C /* Player.cpp in Sources */,
+				0A8C520420A4D4E300C67B19 /* Status.cpp in Sources */,
 				0A3CF38E209694430064602C /* Card.cpp in Sources */,
 				0A3CF38B209694370064602C /* Core.cpp in Sources */,
 				0A3CF383209690F40064602C /* main.cpp in Sources */,
@@ -237,6 +244,7 @@
 				0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */,
 				0A8C51FD20A3A27D00C67B19 /* Action.cpp in Sources */,
 				0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */,
+				0A8C520520A4D4E300C67B19 /* Status.cpp in Sources */,
 				0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */,
 				0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */,
 				0A8C51E6209F9D3800C67B19 /* main.cpp in Sources */,

@@ -31,4 +31,9 @@ namespace INVIGILATION_CORE {
         cout << "Make a decision: " << endl << "  1: Elemental Stuff" << endl << "  2: Play a card from hand" << endl << " >";
         return decision;
     }
+    
+    void ConsoleInterface::notify(const Status& status)
+    {
+        
+    }
 }
