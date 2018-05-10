@@ -20,21 +20,43 @@ namespace INVIGILATION_CORE {
     int ConsoleInterface::MenuItem::interact()
     {
         int result = -1;
-        cout << "Please make a selection below:" << endl << std::left;
+        printSelections(cout);
+        bool invalid = false;
+        do
+        {
+            while (!(std::cin >> result))
+            {
+                cout << "Invalid input. Please try again." << endl << " >";
+                std::cin.clear();
+                std::cin.ignore(INT_MAX, '\n');
+            }
+            if (result < 1 || result > selections.size())
+            {
+                cout << "Invalid input. Please try again." << endl << " >";
+                invalid = true;
+                continue;
+            }
+            if (returnValues[result - 1]->isNumbericResult)
+                return returnValues[result - 1]->numbericResult;
+            result = returnValues[result - 1]->nonNumbericResult->interact();
+            if (result == -1)
+            {
+                printSelections(cout);
+                invalid = true;
+            }
+        } while (invalid);
+        return result;
+    }
+    void ConsoleInterface::MenuItem::printSelections(std::ostream& ost) const
+    {
+        ost << "Please make a selection below:" << endl << std::left;
         int i = 1;
         for (const auto& t: selections)
         {
-            cout << " " << std::setw(3) << i << ": " << t << endl;
+            ost << " " << std::setw(3) << i << ": " << t << endl;
             i += 1;
         }
-        cout << " >" << std::right;
-        while (!(std::cin >> result))
-        {
-            cout << "Invalid input. Please try again." << endl << " >";
-            std::cin.clear();
-            std::cin.ignore();
-        }
-        return result;
+        ost << " >" << std::right;
     }
     
     void ConsoleInterface::MenuItem::addCancel(const std::string &hint)
@@ -62,7 +84,7 @@ namespace INVIGILATION_CORE {
         actionSubMenu->addItem("Elemental Communicate", 2);
         actionSubMenu->addCancel("Cancel");
         defaultActionSelection->addItem("Elemental Related Action", std::move(actionSubMenu));
-        actionSubMenu->addCancel("Pass Turn");
+        defaultActionSelection->addCancel("Pass Turn");
     }
     
     ConsoleInterface::~ConsoleInterface()

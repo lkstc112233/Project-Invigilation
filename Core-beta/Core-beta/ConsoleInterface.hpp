@@ -12,6 +12,7 @@
 #include "Controller.hpp"
 #include <vector>
 #include <string>
+#include <iostream>
 
 namespace INVIGILATION_CORE {
     // This is an interface for controller.
@@ -30,6 +31,7 @@ namespace INVIGILATION_CORE {
             std::vector<std::string> selections;
             std::vector<std::unique_ptr<MenuItemAction>> returnValues;
             int interact();
+            void printSelections(std::ostream& ost) const;
             void addCancel(const std::string &hint);
             void addItem(const std::string &hint, int result);
             void addItem(const std::string &hint, std::unique_ptr<MenuItem> input);
