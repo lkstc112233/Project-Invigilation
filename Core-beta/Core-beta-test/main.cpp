@@ -13,6 +13,8 @@
 #include "../Core-beta/Player.hpp"
 #include "../Core-beta/CardFactory.hpp"
 #include "../Core-beta/Core.hpp"
+#include "../Core-beta/ConsoleInterface.hpp"
+#include "../Core-beta/Action.hpp"
 
 void deckBuildingTest()
 {
@@ -24,6 +26,9 @@ void deckBuildingTest()
 }
 
 int main(int argc, const char * argv[]) {
+    INVIGILATION_CORE::ConsoleInterface ci;
+    while (ci.action()->getType() != INVIGILATION_CORE::Nothing)
+        std::cout << "ActionReceived" << std::endl;
     return 0;
 }
 
