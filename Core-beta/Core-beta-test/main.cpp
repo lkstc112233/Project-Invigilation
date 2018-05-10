@@ -25,10 +25,14 @@ void deckBuildingTest()
     result << core.toString() << std::endl;
 }
 
-int main(int argc, const char * argv[]) {
+void interactionTest()
+{
     INVIGILATION_CORE::ConsoleInterface ci;
     while (ci.action()->getType() != INVIGILATION_CORE::Nothing)
         std::cout << "ActionReceived" << std::endl;
+}
+
+int main(int argc, const char * argv[]) {
     return 0;
 }
 
