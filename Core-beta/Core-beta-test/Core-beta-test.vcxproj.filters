@@ -44,5 +44,17 @@
     <ClCompile Include="..\Core-beta\Core.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\Core-beta\Status.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core-beta\Action.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core-beta\ConsoleInterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Core-beta\Controller.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

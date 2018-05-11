@@ -86,10 +86,14 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Core-beta\Action.cpp" />
     <ClCompile Include="..\Core-beta\Card.cpp" />
     <ClCompile Include="..\Core-beta\CardFactory.cpp" />
+    <ClCompile Include="..\Core-beta\ConsoleInterface.cpp" />
+    <ClCompile Include="..\Core-beta\Controller.cpp" />
     <ClCompile Include="..\Core-beta\Core.cpp" />
     <ClCompile Include="..\Core-beta\Player.cpp" />
+    <ClCompile Include="..\Core-beta\Status.cpp" />
     <ClCompile Include="..\Core-beta\utility.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
