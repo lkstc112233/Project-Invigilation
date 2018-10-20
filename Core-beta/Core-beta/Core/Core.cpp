@@ -6,14 +6,14 @@
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
-#include "stdafx.h"
+#include "../stdafx.h"
 #include <sstream>
 
 #include "Core.hpp"
 #include "Player.hpp"
-#include "Card/Card.hpp"
+#include "../Card/Card.hpp"
 #include "utility.hpp"
-#include "Card/CardFactory.hpp"
+#include "../Card/CardFactory.hpp"
 
 namespace INVIGILATION_CORE {
     Core::Core()

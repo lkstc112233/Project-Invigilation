@@ -11,9 +11,9 @@
 #include <fstream>
 #include <random>
 #include "../Core-beta/Card/Card.hpp"
-#include "../Core-beta/Player.hpp"
+#include "../Core-beta/Core/Player.hpp"
 #include "../Core-beta/Card/CardFactory.hpp"
-#include "../Core-beta/Core.hpp"
+#include "../Core-beta/Core/Core.hpp"
 #include "../Core-beta/Interface/ConsoleInterface.hpp"
 #include "../Core-beta/Interface/Action.hpp"
 #include "../Core-beta/utility.hpp"

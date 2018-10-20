@@ -6,13 +6,13 @@
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
-#include "stdafx.h"
+#include "../stdafx.h"
 #include <string>
 #include <sstream>
 #include "Player.hpp"
-#include "Card/Card.hpp"
+#include "../Card/Card.hpp"
 #include "utility.hpp"
-#include "Card/CardFactory.hpp"
+#include "../Card/CardFactory.hpp"
 using std::unique_ptr;
 
 namespace INVIGILATION_CORE {

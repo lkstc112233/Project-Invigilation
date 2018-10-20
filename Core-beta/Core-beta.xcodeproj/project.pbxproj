@@ -10,10 +10,8 @@
 		0A3CF383209690F40064602C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF382209690F40064602C /* main.cpp */; };
 		0A3CF38B209694370064602C /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF389209694370064602C /* Core.cpp */; };
 		0A3CF38E209694430064602C /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
-		0A3CF3912096985C0064602C /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
 		0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF389209694370064602C /* Core.cpp */; };
 		0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
-		0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
 		0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
 		0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
 		0A8C51F820A39F4E00C67B19 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F620A39F4E00C67B19 /* Controller.cpp */; };
@@ -27,6 +25,8 @@
 		0A9A2E71217BDED7006D0589 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
 		0A9A2E72217BDEDA006D0589 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
 		0A9A2E73217BDF2A006D0589 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51E5209F9D3800C67B19 /* main.cpp */; };
+		0A9A2E76217BEE35006D0589 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
+		0A9A2E77217BEE36006D0589 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,15 +115,10 @@
 		0A3CF381209690F40064602C /* Core-beta */ = {
 			isa = PBXGroup;
 			children = (
+				0A9A2E75217BEDF2006D0589 /* Core */,
 				0A9A2E70217BDDEE006D0589 /* Card */,
-				0A3CF389209694370064602C /* Core.cpp */,
-				0A3CF38A209694370064602C /* Core.hpp */,
 				0A9A2E74217BEC32006D0589 /* Interface */,
 				0A3CF382209690F40064602C /* main.cpp */,
-				0A3CF38F2096985C0064602C /* Player.cpp */,
-				0A3CF3902096985C0064602C /* Player.hpp */,
-				0A8C520220A4D4E300C67B19 /* Status.cpp */,
-				0A8C520320A4D4E300C67B19 /* Status.hpp */,
 				0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */,
 				0A8C51F2209FD89300C67B19 /* utility.cpp */,
 				0A8C51F3209FD89300C67B19 /* utility.hpp */,
@@ -161,6 +156,19 @@
 				0A8C51F720A39F4E00C67B19 /* Controller.hpp */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		0A9A2E75217BEDF2006D0589 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0A3CF389209694370064602C /* Core.cpp */,
+				0A3CF38A209694370064602C /* Core.hpp */,
+				0A3CF38F2096985C0064602C /* Player.cpp */,
+				0A3CF3902096985C0064602C /* Player.hpp */,
+				0A8C520220A4D4E300C67B19 /* Status.cpp */,
+				0A8C520320A4D4E300C67B19 /* Status.hpp */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +251,8 @@
 				0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */,
 				0A8C51FC20A3A27D00C67B19 /* Action.cpp in Sources */,
 				0A9A2E71217BDED7006D0589 /* CardFactory.cpp in Sources */,
-				0A3CF3912096985C0064602C /* Player.cpp in Sources */,
 				0A8C520420A4D4E300C67B19 /* Status.cpp in Sources */,
+				0A9A2E76217BEE35006D0589 /* Player.cpp in Sources */,
 				0A3CF38E209694430064602C /* Card.cpp in Sources */,
 				0A3CF38B209694370064602C /* Core.cpp in Sources */,
 				0A3CF383209690F40064602C /* main.cpp in Sources */,
@@ -260,8 +268,8 @@
 				0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */,
 				0A8C51FD20A3A27D00C67B19 /* Action.cpp in Sources */,
 				0A9A2E72217BDEDA006D0589 /* CardFactory.cpp in Sources */,
-				0A8C51EC209FA61B00C67B19 /* Player.cpp in Sources */,
 				0A8C520520A4D4E300C67B19 /* Status.cpp in Sources */,
+				0A9A2E77217BEE36006D0589 /* Player.cpp in Sources */,
 				0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */,
 				0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */,
 				0A8C51F920A39F4E00C67B19 /* Controller.cpp in Sources */,
