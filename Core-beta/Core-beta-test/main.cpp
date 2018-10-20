@@ -14,8 +14,8 @@
 #include "../Core-beta/Player.hpp"
 #include "../Core-beta/Card/CardFactory.hpp"
 #include "../Core-beta/Core.hpp"
-#include "../Core-beta/ConsoleInterface.hpp"
-#include "../Core-beta/Action.hpp"
+#include "../Core-beta/Interface/ConsoleInterface.hpp"
+#include "../Core-beta/Interface/Action.hpp"
 #include "../Core-beta/utility.hpp"
 
 void deckBuildingTest()

@@ -116,14 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				0A9A2E70217BDDEE006D0589 /* Card */,
-				0A8C51FA20A3A27D00C67B19 /* Action.cpp */,
-				0A8C51FB20A3A27D00C67B19 /* Action.hpp */,
-				0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */,
-				0A8C51FF20A3CD1A00C67B19 /* ConsoleInterface.hpp */,
-				0A8C51F620A39F4E00C67B19 /* Controller.cpp */,
-				0A8C51F720A39F4E00C67B19 /* Controller.hpp */,
 				0A3CF389209694370064602C /* Core.cpp */,
 				0A3CF38A209694370064602C /* Core.hpp */,
+				0A9A2E74217BEC32006D0589 /* Interface */,
 				0A3CF382209690F40064602C /* main.cpp */,
 				0A3CF38F2096985C0064602C /* Player.cpp */,
 				0A3CF3902096985C0064602C /* Player.hpp */,
@@ -153,6 +148,19 @@
 				0A8C51EF209FB09400C67B19 /* CardFactory.hpp */,
 			);
 			path = Card;
+			sourceTree = "<group>";
+		};
+		0A9A2E74217BEC32006D0589 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0A8C51FA20A3A27D00C67B19 /* Action.cpp */,
+				0A8C51FB20A3A27D00C67B19 /* Action.hpp */,
+				0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */,
+				0A8C51FF20A3CD1A00C67B19 /* ConsoleInterface.hpp */,
+				0A8C51F620A39F4E00C67B19 /* Controller.cpp */,
+				0A8C51F720A39F4E00C67B19 /* Controller.hpp */,
+			);
+			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
