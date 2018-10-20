@@ -10,9 +10,9 @@
 #include <string>
 #include <sstream>
 #include "Player.hpp"
-#include "Card.hpp"
+#include "Card/Card.hpp"
 #include "utility.hpp"
-#include "CardFactory.hpp"
+#include "Card/CardFactory.hpp"
 using std::unique_ptr;
 
 namespace INVIGILATION_CORE {

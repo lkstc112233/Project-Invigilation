@@ -10,9 +10,9 @@
 #include <iostream>
 #include <fstream>
 #include <random>
-#include "../Core-beta/Card.hpp"
+#include "../Core-beta/Card/Card.hpp"
 #include "../Core-beta/Player.hpp"
-#include "../Core-beta/CardFactory.hpp"
+#include "../Core-beta/Card/CardFactory.hpp"
 #include "../Core-beta/Core.hpp"
 #include "../Core-beta/ConsoleInterface.hpp"
 #include "../Core-beta/Action.hpp"

@@ -11,9 +11,9 @@
 
 #include "Core.hpp"
 #include "Player.hpp"
-#include "Card.hpp"
+#include "Card/Card.hpp"
 #include "utility.hpp"
-#include "CardFactory.hpp"
+#include "Card/CardFactory.hpp"
 
 namespace INVIGILATION_CORE {
     Core::Core()
