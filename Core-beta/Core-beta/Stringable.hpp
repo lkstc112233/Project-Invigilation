@@ -15,7 +15,7 @@ namespace INVIGILATION_CORE
 {
     /**
      * This is an interface indicating that the class can be represented into a string.
-     * The converted string is human-readable, so it can be used to make automatic tests.
+     * The converted string is human-readable, so it can be used to make automated tests.
      * upon converted the string is stored in a std::string structure.
      */
     class Stringable
