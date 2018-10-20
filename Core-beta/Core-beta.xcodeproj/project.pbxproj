@@ -115,8 +115,8 @@
 		0A3CF381209690F40064602C /* Core-beta */ = {
 			isa = PBXGroup;
 			children = (
-				0A9A2E75217BEDF2006D0589 /* Core */,
 				0A9A2E70217BDDEE006D0589 /* Card */,
+				0A9A2E75217BEDF2006D0589 /* Core */,
 				0A9A2E74217BEC32006D0589 /* Interface */,
 				0A3CF382209690F40064602C /* main.cpp */,
 				0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */,
