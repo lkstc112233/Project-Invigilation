@@ -154,6 +154,8 @@
 				0A8C51FF20A3CD1A00C67B19 /* ConsoleInterface.hpp */,
 				0A8C51F620A39F4E00C67B19 /* Controller.cpp */,
 				0A8C51F720A39F4E00C67B19 /* Controller.hpp */,
+				0A8C520220A4D4E300C67B19 /* Status.cpp */,
+				0A8C520320A4D4E300C67B19 /* Status.hpp */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -165,8 +167,6 @@
 				0A3CF38A209694370064602C /* Core.hpp */,
 				0A3CF38F2096985C0064602C /* Player.cpp */,
 				0A3CF3902096985C0064602C /* Player.hpp */,
-				0A8C520220A4D4E300C67B19 /* Status.cpp */,
-				0A8C520320A4D4E300C67B19 /* Status.hpp */,
 			);
 			path = Core;
 			sourceTree = "<group>";
