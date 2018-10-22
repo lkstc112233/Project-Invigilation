@@ -11,7 +11,7 @@
 #include <sstream>
 #include "Player.hpp"
 #include "../Card/Card.hpp"
-#include "utility.hpp"
+#include "../utility.hpp"
 #include "../Card/CardFactory.hpp"
 using std::unique_ptr;
 

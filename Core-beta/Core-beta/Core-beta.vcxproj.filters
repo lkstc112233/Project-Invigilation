@@ -21,48 +21,39 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Card.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Core.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Stringable.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="utility.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CardFactory.hpp">
+    <ClInclude Include="Core\Core.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Action.hpp">
+    <ClInclude Include="Core\Player.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ConsoleInterface.hpp">
+    <ClInclude Include="Core\Status.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Controller.hpp">
+    <ClInclude Include="Interface\Action.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Status.hpp">
+    <ClInclude Include="Interface\ConsoleInterface.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface\Controller.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Card\Card.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Card\CardFactory.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Core.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Card.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -71,19 +62,28 @@
     <ClCompile Include="utility.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CardFactory.cpp">
+    <ClCompile Include="Core\Core.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Action.cpp">
+    <ClCompile Include="Core\Player.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ConsoleInterface.cpp">
+    <ClCompile Include="Core\Status.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Controller.cpp">
+    <ClCompile Include="Interface\Action.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Status.cpp">
+    <ClCompile Include="Interface\ConsoleInterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface\Controller.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Card\Card.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Card\CardFactory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

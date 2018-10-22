@@ -12,7 +12,7 @@
 #include "Core.hpp"
 #include "Player.hpp"
 #include "../Card/Card.hpp"
-#include "utility.hpp"
+#include "../utility.hpp"
 #include "../Card/CardFactory.hpp"
 
 namespace INVIGILATION_CORE {

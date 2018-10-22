@@ -11,7 +11,7 @@
 
 #include <vector>
 #include <string>
-#include "Stringable.hpp"
+#include "../Stringable.hpp"
 
 namespace INVIGILATION_CORE {
     class Card;

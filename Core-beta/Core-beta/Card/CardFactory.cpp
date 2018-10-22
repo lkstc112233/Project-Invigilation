@@ -9,7 +9,7 @@
 #include "../stdafx.h"
 #include "Card.hpp"
 #include "CardFactory.hpp"
-#include "utility.hpp"
+#include "../utility.hpp"
 using std::unique_ptr;
 
 namespace INVIGILATION_CORE

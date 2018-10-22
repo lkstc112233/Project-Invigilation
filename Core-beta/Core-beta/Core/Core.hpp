@@ -10,7 +10,7 @@
 #define Core_hpp
 
 #include <vector>
-#include "Stringable.hpp"
+#include "../Stringable.hpp"
 
 namespace INVIGILATION_CORE {
     class Player;

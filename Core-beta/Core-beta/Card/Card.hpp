@@ -10,7 +10,7 @@
 #define Card_hpp
 
 #include <string>
-#include "Stringable.hpp"
+#include "../Stringable.hpp"
 
 namespace INVIGILATION_CORE {
     enum CardType
