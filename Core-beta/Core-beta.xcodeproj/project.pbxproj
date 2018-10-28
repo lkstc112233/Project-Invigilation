@@ -10,36 +10,32 @@
 		0A3CF383209690F40064602C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF382209690F40064602C /* main.cpp */; };
 		0A3CF38B209694370064602C /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF389209694370064602C /* Core.cpp */; };
 		0A3CF38E209694430064602C /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
-		0A8C51EA209FA61B00C67B19 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF389209694370064602C /* Core.cpp */; };
-		0A8C51EB209FA61B00C67B19 /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
+		0A3F547C21864F7200F69647 /* Action.proto in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F547B21864F7200F69647 /* Action.proto */; };
+		0A3F547E21864F8C00F69647 /* Status.proto in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F547D21864F8C00F69647 /* Status.proto */; };
 		0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
-		0A8C51F5209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
 		0A8C51F820A39F4E00C67B19 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F620A39F4E00C67B19 /* Controller.cpp */; };
-		0A8C51F920A39F4E00C67B19 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F620A39F4E00C67B19 /* Controller.cpp */; };
-		0A8C51FC20A3A27D00C67B19 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FA20A3A27D00C67B19 /* Action.cpp */; };
-		0A8C51FD20A3A27D00C67B19 /* Action.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FA20A3A27D00C67B19 /* Action.cpp */; };
 		0A8C520020A3CD1A00C67B19 /* ConsoleInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */; };
-		0A8C520120A3CD1A00C67B19 /* ConsoleInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */; };
-		0A8C520420A4D4E300C67B19 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C520220A4D4E300C67B19 /* Status.cpp */; };
-		0A8C520520A4D4E300C67B19 /* Status.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C520220A4D4E300C67B19 /* Status.cpp */; };
 		0A9A2E71217BDED7006D0589 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
-		0A9A2E72217BDEDA006D0589 /* CardFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51EE209FB09400C67B19 /* CardFactory.cpp */; };
-		0A9A2E73217BDF2A006D0589 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51E5209F9D3800C67B19 /* main.cpp */; };
 		0A9A2E76217BEE35006D0589 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
-		0A9A2E77217BEE36006D0589 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38F2096985C0064602C /* Player.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		0A3F547921864E9300F69647 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.proto";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).pb.cc",
+				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).pb.h",
+			);
+			script = "protoc -I=\"$INPUT_FILE_DIR\" --cpp_out=\"$INPUT_FILE_DIR\" \"$INPUT_FILE_PATH\"\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0A3CF37D209690F40064602C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-		0A8C51E1209F9D3800C67B19 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -59,8 +55,8 @@
 		0A3CF38D209694430064602C /* Card.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Card.hpp; sourceTree = "<group>"; };
 		0A3CF38F2096985C0064602C /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		0A3CF3902096985C0064602C /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
-		0A8C51E3209F9D3800C67B19 /* Core-beta-test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Core-beta-test"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A8C51E5209F9D3800C67B19 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0A3F547B21864F7200F69647 /* Action.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = Action.proto; sourceTree = "<group>"; };
+		0A3F547D21864F8C00F69647 /* Status.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = Status.proto; sourceTree = "<group>"; };
 		0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stringable.hpp; sourceTree = "<group>"; };
 		0A8C51EE209FB09400C67B19 /* CardFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CardFactory.cpp; sourceTree = "<group>"; };
 		0A8C51EF209FB09400C67B19 /* CardFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardFactory.hpp; sourceTree = "<group>"; };
@@ -68,23 +64,12 @@
 		0A8C51F3209FD89300C67B19 /* utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = utility.hpp; sourceTree = "<group>"; };
 		0A8C51F620A39F4E00C67B19 /* Controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
 		0A8C51F720A39F4E00C67B19 /* Controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Controller.hpp; sourceTree = "<group>"; };
-		0A8C51FA20A3A27D00C67B19 /* Action.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Action.cpp; sourceTree = "<group>"; };
-		0A8C51FB20A3A27D00C67B19 /* Action.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Action.hpp; sourceTree = "<group>"; };
 		0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleInterface.cpp; sourceTree = "<group>"; };
 		0A8C51FF20A3CD1A00C67B19 /* ConsoleInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConsoleInterface.hpp; sourceTree = "<group>"; };
-		0A8C520220A4D4E300C67B19 /* Status.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Status.cpp; sourceTree = "<group>"; };
-		0A8C520320A4D4E300C67B19 /* Status.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Status.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0A3CF37C209690F40064602C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A8C51E0209F9D3800C67B19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,14 +123,12 @@
 		0A9A2E74217BEC32006D0589 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				0A8C51FA20A3A27D00C67B19 /* Action.cpp */,
-				0A8C51FB20A3A27D00C67B19 /* Action.hpp */,
 				0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */,
 				0A8C51FF20A3CD1A00C67B19 /* ConsoleInterface.hpp */,
 				0A8C51F620A39F4E00C67B19 /* Controller.cpp */,
 				0A8C51F720A39F4E00C67B19 /* Controller.hpp */,
-				0A8C520220A4D4E300C67B19 /* Status.cpp */,
-				0A8C520320A4D4E300C67B19 /* Status.hpp */,
+				0A3F547B21864F7200F69647 /* Action.proto */,
+				0A3F547D21864F8C00F69647 /* Status.proto */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -173,6 +156,7 @@
 				0A3CF37D209690F40064602C /* CopyFiles */,
 			);
 			buildRules = (
+				0A3F547921864E9300F69647 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -218,14 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */,
-				0A8C51FC20A3A27D00C67B19 /* Action.cpp in Sources */,
 				0A9A2E71217BDED7006D0589 /* CardFactory.cpp in Sources */,
-				0A8C520420A4D4E300C67B19 /* Status.cpp in Sources */,
 				0A9A2E76217BEE35006D0589 /* Player.cpp in Sources */,
 				0A3CF38E209694430064602C /* Card.cpp in Sources */,
 				0A3CF38B209694370064602C /* Core.cpp in Sources */,
 				0A3CF383209690F40064602C /* main.cpp in Sources */,
 				0A8C51F820A39F4E00C67B19 /* Controller.cpp in Sources */,
+				0A3F547C21864F7200F69647 /* Action.proto in Sources */,
+				0A3F547E21864F8C00F69647 /* Status.proto in Sources */,
 				0A8C520020A3CD1A00C67B19 /* ConsoleInterface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,9 +268,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lprotobuf";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -336,8 +323,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lprotobuf";
 				SDKROOT = macosx;
 			};
 			name = Release;

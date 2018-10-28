@@ -10,13 +10,13 @@
 #define ConsoleInterface_hpp
 
 #include "Controller.hpp"
+#include "Action.pb.h"
 #include <vector>
 #include <string>
 #include <iostream>
 
 namespace INVIGILATION_CORE {
     // This is an interface for controller.
-    class Action;
     class Status;
     
     class ConsoleInterface: public Controller
@@ -52,7 +52,7 @@ namespace INVIGILATION_CORE {
     public:
         ConsoleInterface();
         virtual ~ConsoleInterface();
-        virtual std::unique_ptr<Action> action();
+        virtual Action action();
         virtual void notify(const Status& status);
     private:
         std::unique_ptr<MenuItem> defaultActionSelection;

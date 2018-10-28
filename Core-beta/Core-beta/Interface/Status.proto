@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package INVIGILATION_CORE;
+
+message Status {
+    enum Type
+    {
+        ElementalAction = 0;
+        DamageReduction = 1;
+        PlayCard = 2;
+    };
+    Type type = 1;
+};
+

@@ -9,6 +9,8 @@
 #ifndef Controller_hpp
 #define Controller_hpp
 
+#include "Action.pb.h"
+
 namespace INVIGILATION_CORE {
     // This is an interface for controller.
     // It fires Action to push forward game process.
@@ -20,7 +22,7 @@ namespace INVIGILATION_CORE {
     public:
         Controller();
         virtual ~Controller();
-        virtual std::unique_ptr<Action> action() = 0;
+        virtual Action action() = 0;
         virtual void notify(const Status& update) = 0;
     };
 }

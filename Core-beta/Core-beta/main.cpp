@@ -1,16 +1,50 @@
 //
 //  main.cpp
-//  Core-beta
+//  Core-beta-test
 //
-//  Created by Photon Cat on 2018/4/29.
+//  Created by Photon Cat on 2018/5/6.
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
 #include "stdafx.h"
 #include <iostream>
+#include <fstream>
+#include <random>
+#include "Card/Card.hpp"
+#include "Core/Player.hpp"
+#include "Card/CardFactory.hpp"
+#include "Core/Core.hpp"
+#include "Interface/ConsoleInterface.hpp"
+#include "Interface/Action.pb.h"
+#include "utility.hpp"
+
+void deckBuildingTest()
+{
+    std::ofstream result("testResult.txt");
+    INVIGILATION_CORE::Core core;
+    core.createPlayers();
+    result << "Hello, Test!" << std::endl;
+    result << core.toString() << std::endl;
+}
+
+void interactionTest()
+{
+    INVIGILATION_CORE::ConsoleInterface ci;
+    while (ci.action().type() != INVIGILATION_CORE::Action::Nothing)
+        std::cout << "ActionReceived" << std::endl;
+}
+
+namespace INVIGILATION_CORE
+{
+    namespace UTILITY
+    {
+        extern std::mt19937 RandomDevice19937ForShuffling;
+    }
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    INVIGILATION_CORE::UTILITY::RandomDevice19937ForShuffling.seed(42);
+    deckBuildingTest();
     return 0;
 }
+

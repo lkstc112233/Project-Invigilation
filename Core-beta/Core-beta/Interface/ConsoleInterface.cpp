@@ -8,7 +8,7 @@
 
 #include "../stdafx.h"
 #include "ConsoleInterface.hpp"
-#include "Action.hpp"
+#include "Action.pb.h"
 
 #include <iostream>
 #include <iomanip>
@@ -92,20 +92,20 @@ namespace INVIGILATION_CORE {
         
     }
     
-    std::unique_ptr<Action> ConsoleInterface::action()
+    Action ConsoleInterface::action()
     {
-        auto decision = std::make_unique<Action>();
+        Action decision;
         int selection = defaultActionSelection->interact();
         switch (selection) {
             case 1:
-                decision->setType(ElementalAction);
+                decision.set_type(Action::ElementalAction);
                 break;
             case 2:
-                decision->setType(ElementalAction);
+                decision.set_type(Action::ElementalAction);
                 break;
             case -1:
             default:
-                decision->setType(Nothing);
+                decision.set_type(Action::Nothing);
         }
         return decision;
     }
