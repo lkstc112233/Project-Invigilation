@@ -46,8 +46,6 @@ namespace INVIGILATION_CORE {
             const bool isNumbericResult;
             const int numbericResult = 0;
             std::unique_ptr<MenuItem> nonNumbericResult;
-            std::unique_ptr<MenuItemAction> parent;
-            void setParent(std::unique_ptr<MenuItemAction> newParent) { parent = std::move(newParent); }
         };
     public:
         ConsoleInterface();
