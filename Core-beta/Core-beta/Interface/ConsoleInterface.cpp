@@ -45,9 +45,10 @@ namespace INVIGILATION_CORE {
                 invalid = true;
                 continue;
             }
-            if (returnValues[result - 1]->isNumbericResult)
-                return returnValues[result - 1]->numbericResult;
-            result = returnValues[result - 1]->nonNumbericResult->interact();
+            result = returnValues[result - 1]->interact();
+            if (result == -2) {
+                return -1;
+            }
             if (result == -1)
             {
                 printSelections(cout);
@@ -70,7 +71,7 @@ namespace INVIGILATION_CORE {
     
     void ConsoleInterface::MenuItem::addCancel(const std::string &hint)
     {
-        addItem(hint, -1);
+        addItem(hint, -2);
     }
 
     void ConsoleInterface::MenuItem::addItem(const std::string &hint, int result)

@@ -39,13 +39,14 @@ namespace INVIGILATION_CORE {
     private:
         class MenuItemAction
         {
+        private:
+            const bool isNumbericResult;
+            const int numbericResult = 0;
+            std::unique_ptr<MenuItem> nonNumbericResult;
         public:
             MenuItemAction(int result): isNumbericResult(true), numbericResult(result) {}
             MenuItemAction(std::unique_ptr<MenuItem> result): isNumbericResult(false), nonNumbericResult(std::move(result)) {}
             ~MenuItemAction(){}
-            const bool isNumbericResult;
-            const int numbericResult = 0;
-            std::unique_ptr<MenuItem> nonNumbericResult;
             int interact();
         };
     public:
