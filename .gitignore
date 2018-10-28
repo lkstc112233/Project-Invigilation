@@ -1,6 +1,10 @@
 # macOs Files
 .DS_Store
 
+# protobuf outputs
+*.pb.h
+*.pb.cc
+
 # Testing file
 testResult.txt
 
