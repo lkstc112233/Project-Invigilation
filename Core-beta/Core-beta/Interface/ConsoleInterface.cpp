@@ -24,6 +24,7 @@ namespace INVIGILATION_CORE {
         bool invalid = false;
         do
         {
+            invalid = false;
             while (!(std::cin >> result))
             {
                 cout << "Invalid input. Please try again." << endl << " >";
