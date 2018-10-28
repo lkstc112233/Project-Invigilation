@@ -6,122 +6,105 @@
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
-#include "../stdafx.h"
 #include "ConsoleInterface.hpp"
+#include "../stdafx.h"
 #include "Action.pb.h"
 
-#include <iostream>
 #include <iomanip>
 #include <ios>
+#include <iostream>
 using std::cout;
 using std::endl;
 
 namespace INVIGILATION_CORE {
-    int ConsoleInterface::MenuItemAction::interact()
-    {
-        if (isNumbericResult) {
-            return numbericResult;
-        } else {
-            return nonNumbericResult->interact();
-        }
-    }
-    int ConsoleInterface::MenuItem::interact()
-    {
-        int result = -1;
-        printSelections(cout);
-        bool invalid = false;
-        do
-        {
-            invalid = false;
-            while (!(std::cin >> result))
-            {
-                cout << "Invalid input. Please try again." << endl << " >";
-                std::cin.clear();
-                std::cin.ignore(INT_MAX, '\n');
-            }
-            if (result < 1 || result > selections.size())
-            {
-                cout << "Invalid input. Please try again." << endl << " >";
-                invalid = true;
-                continue;
-            }
-            result = returnValues[result - 1]->interact();
-            if (result == -2) {
-                return -1;
-            }
-            if (result == -1)
-            {
-                printSelections(cout);
-                invalid = true;
-            }
-        } while (invalid);
-        return result;
-    }
-    void ConsoleInterface::MenuItem::printSelections(std::ostream& ost) const
-    {
-        ost << "Please make a selection below:" << endl << std::left;
-        int i = 1;
-        for (const auto& t: selections)
-        {
-            ost << " " << std::setw(3) << i << ": " << t << endl;
-            i += 1;
-        }
-        ost << " >" << std::right;
-    }
-    
-    void ConsoleInterface::MenuItem::addCancel(const std::string &hint)
-    {
-        addItem(hint, -2);
-    }
-
-    void ConsoleInterface::MenuItem::addItem(const std::string &hint, int result)
-    {
-        selections.push_back(hint);
-        returnValues.push_back(std::make_unique<MenuItemAction>(result));
-    }
-    
-    void ConsoleInterface::MenuItem::addItem(const std::string &hint, std::unique_ptr<MenuItem> input)
-    {
-        selections.push_back(hint);
-        returnValues.push_back(std::make_unique<MenuItemAction>(std::move(input)));
-    }
-    
-    ConsoleInterface::ConsoleInterface()
-    {
-        defaultActionSelection = std::make_unique<MenuItem>();
-        auto actionSubMenu = std::make_unique<MenuItem>();
-        actionSubMenu->addItem("Elemental Attack", 1);
-        actionSubMenu->addItem("Elemental Communicate", 2);
-        actionSubMenu->addCancel("Cancel");
-        defaultActionSelection->addItem("Elemental Related Action", std::move(actionSubMenu));
-        defaultActionSelection->addCancel("Pass Turn");
-    }
-    
-    ConsoleInterface::~ConsoleInterface()
-    {
-        
-    }
-    
-    Action ConsoleInterface::action()
-    {
-        Action decision;
-        int selection = defaultActionSelection->interact();
-        switch (selection) {
-            case 1:
-                decision.set_type(Action::ElementalAction);
-                break;
-            case 2:
-                decision.set_type(Action::ElementalAction);
-                break;
-            case -1:
-            default:
-                decision.set_type(Action::Nothing);
-        }
-        return decision;
-    }
-    
-    void ConsoleInterface::notify(const Status& status)
-    {
-        
-    }
+int ConsoleInterface::MenuItemAction::interact() {
+  if (isNumbericResult) {
+    return numbericResult;
+  } else {
+    return nonNumbericResult->interact();
+  }
 }
+int ConsoleInterface::MenuItem::interact() {
+  int result = -1;
+  printSelections(cout);
+  bool invalid = false;
+  do {
+    invalid = false;
+    while (!(std::cin >> result)) {
+      cout << "Invalid input. Please try again." << endl << " >";
+      std::cin.clear();
+      std::cin.ignore(INT_MAX, '\n');
+    }
+    if (result < 1 || result > selections.size()) {
+      cout << "Invalid input. Please try again." << endl << " >";
+      invalid = true;
+      continue;
+    }
+    result = returnValues[result - 1]->interact();
+    if (result == -2) {
+      return -1;
+    }
+    if (result == -1) {
+      printSelections(cout);
+      invalid = true;
+    }
+  } while (invalid);
+  return result;
+}
+void ConsoleInterface::MenuItem::printSelections(std::ostream& ost) const {
+  ost << "Please make a selection below:" << endl << std::left;
+  int i = 1;
+  for (const auto& t : selections) {
+    ost << " " << std::setw(3) << i << ": " << t << endl;
+    i += 1;
+  }
+  ost << " >" << std::right;
+}
+
+void ConsoleInterface::MenuItem::addCancel(const std::string& hint) {
+  addItem(hint, -2);
+}
+
+void ConsoleInterface::MenuItem::addItem(const std::string& hint, int result) {
+  selections.push_back(hint);
+  returnValues.push_back(std::make_unique<MenuItemAction>(result));
+}
+
+void ConsoleInterface::MenuItem::addItem(const std::string& hint,
+                                         std::unique_ptr<MenuItem> input) {
+  selections.push_back(hint);
+  returnValues.push_back(std::make_unique<MenuItemAction>(std::move(input)));
+}
+
+ConsoleInterface::ConsoleInterface() {
+  defaultActionSelection = std::make_unique<MenuItem>();
+  auto actionSubMenu = std::make_unique<MenuItem>();
+  actionSubMenu->addItem("Elemental Attack", 1);
+  actionSubMenu->addItem("Elemental Communicate", 2);
+  actionSubMenu->addCancel("Cancel");
+  defaultActionSelection->addItem("Elemental Related Action",
+                                  std::move(actionSubMenu));
+  defaultActionSelection->addCancel("Pass Turn");
+}
+
+ConsoleInterface::~ConsoleInterface() {}
+
+Action ConsoleInterface::action() {
+  Action decision;
+  int selection = defaultActionSelection->interact();
+  switch (selection) {
+    case 1:
+      decision.set_type(Action::ElementalAction);
+      break;
+    case 2:
+      decision.set_type(Action::ElementalAction);
+      break;
+    case -1:
+    default:
+      decision.set_type(Action::Nothing);
+  }
+  return decision;
+}
+
+void ConsoleInterface::notify(const Status& status) {}
+}  // namespace INVIGILATION_CORE

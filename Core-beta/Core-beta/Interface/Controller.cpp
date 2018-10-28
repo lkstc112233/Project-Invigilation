@@ -6,17 +6,11 @@
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
 
-#include "../stdafx.h"
 #include "Controller.hpp"
+#include "../stdafx.h"
 
 namespace INVIGILATION_CORE {
-    Controller::Controller()
-    {
-        
-    }
-    
-    Controller::~Controller()
-    {
-        
-    }
-}
+Controller::Controller() {}
+
+Controller::~Controller() {}
+}  // namespace INVIGILATION_CORE

@@ -3,11 +3,11 @@ syntax = "proto3";
 package INVIGILATION_CORE;
 
 message Action {
-    enum Type {
-        Nothing = 0;
-        ElementalAction = 1;
-        DamageReduction = 2;
-        PlayCard = 3;
-    };
-    Type type = 1;
+  enum Type {
+    Nothing = 0;
+    ElementalAction = 1;
+    DamageReduction = 2;
+    PlayCard = 3;
+  };
+  Type type = 1;
 };
