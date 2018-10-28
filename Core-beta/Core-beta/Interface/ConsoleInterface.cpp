@@ -17,6 +17,14 @@ using std::cout;
 using std::endl;
 
 namespace INVIGILATION_CORE {
+    int ConsoleInterface::MenuItemAction::interact()
+    {
+        if (isNumbericResult) {
+            return numbericResult;
+        } else {
+            return nonNumbericResult->interact();
+        }
+    }
     int ConsoleInterface::MenuItem::interact()
     {
         int result = -1;
