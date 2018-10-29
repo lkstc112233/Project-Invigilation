@@ -11,13 +11,13 @@
 
 #include "Controller.hpp"
 #include "Action.pb.h"
+#include "Status.pb.h"
 #include <vector>
 #include <string>
 #include <iostream>
 
 namespace INVIGILATION_CORE {
     // This is an interface for controller.
-    class Status;
     
     class ConsoleInterface: public Controller
     {
