@@ -12,6 +12,7 @@
 		0A3CF38E209694430064602C /* Card.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A3CF38C209694430064602C /* Card.cpp */; };
 		0A3F547C21864F7200F69647 /* Action.proto in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F547B21864F7200F69647 /* Action.proto */; };
 		0A3F547E21864F8C00F69647 /* Status.proto in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F547D21864F8C00F69647 /* Status.proto */; };
+		0A3F548A2187C50900F69647 /* Card.proto in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F54892187C50900F69647 /* Card.proto */; };
 		0A8C51F4209FD89300C67B19 /* utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F2209FD89300C67B19 /* utility.cpp */; };
 		0A8C51F820A39F4E00C67B19 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51F620A39F4E00C67B19 /* Controller.cpp */; };
 		0A8C520020A3CD1A00C67B19 /* ConsoleInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0A8C51FE20A3CD1A00C67B19 /* ConsoleInterface.cpp */; };
@@ -30,7 +31,7 @@
 				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).pb.cc",
 				"$(INPUT_FILE_DIR)/$(INPUT_FILE_BASE).pb.h",
 			);
-			script = "protoc -I=\"$INPUT_FILE_DIR\" --cpp_out=\"$INPUT_FILE_DIR\" \"$INPUT_FILE_PATH\"\n";
+			script = "protoc -I=$PROJECT_DIR --cpp_out=$PROJECT_DIR $INPUT_FILE_PATH\n";
 		};
 /* End PBXBuildRule section */
 
@@ -57,6 +58,7 @@
 		0A3CF3902096985C0064602C /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
 		0A3F547B21864F7200F69647 /* Action.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = Action.proto; sourceTree = "<group>"; };
 		0A3F547D21864F8C00F69647 /* Status.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = Status.proto; sourceTree = "<group>"; };
+		0A3F54892187C50900F69647 /* Card.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = Card.proto; sourceTree = "<group>"; };
 		0A8C51ED209FA6EC00C67B19 /* Stringable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stringable.hpp; sourceTree = "<group>"; };
 		0A8C51EE209FB09400C67B19 /* CardFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CardFactory.cpp; sourceTree = "<group>"; };
 		0A8C51EF209FB09400C67B19 /* CardFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardFactory.hpp; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				0A3CF38D209694430064602C /* Card.hpp */,
 				0A8C51EE209FB09400C67B19 /* CardFactory.cpp */,
 				0A8C51EF209FB09400C67B19 /* CardFactory.hpp */,
+				0A3F54892187C50900F69647 /* Card.proto */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				0A8C51F820A39F4E00C67B19 /* Controller.cpp in Sources */,
 				0A3F547C21864F7200F69647 /* Action.proto in Sources */,
 				0A3F547E21864F8C00F69647 /* Status.proto in Sources */,
+				0A3F548A2187C50900F69647 /* Card.proto in Sources */,
 				0A8C520020A3CD1A00C67B19 /* ConsoleInterface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +340,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I$(PROJECT_DIR)",
+					"$(OTHER_CFLAGS)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -344,6 +353,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-I$(PROJECT_DIR)",
+					"$(OTHER_CFLAGS)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
