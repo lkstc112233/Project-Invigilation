@@ -5,9 +5,9 @@
 //  Created by Photon Cat on 2018/5/6.
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
+#include "../stdafx.h"
 
 #include "CardFactory.hpp"
-#include "../stdafx.h"
 #include "../utility.hpp"
 #include "Card.hpp"
 using std::unique_ptr;

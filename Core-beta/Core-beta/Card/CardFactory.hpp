@@ -11,11 +11,10 @@
 
 #include <string>
 
+#include "Card.hpp"
+
 namespace INVIGILATION_CORE
 {
-    class Card;
-    enum CardType;
-    
     /**
      * Friend of Card.
      * Generates Card.

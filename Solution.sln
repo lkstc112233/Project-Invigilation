@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core-beta", "Core-beta\Core-beta\Core-beta.vcxproj", "{37D8E773-9AE5-42DD-8C01-EC55B9FDBA3D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core-beta-test", "Core-beta\Core-beta-test\Core-beta-test.vcxproj", "{320C4AF6-1D0F-45E9-A2FA-9A19463C983F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -17,10 +15,6 @@ Global
 		{37D8E773-9AE5-42DD-8C01-EC55B9FDBA3D}.Debug|x64.Build.0 = Debug|x64
 		{37D8E773-9AE5-42DD-8C01-EC55B9FDBA3D}.Release|x64.ActiveCfg = Release|x64
 		{37D8E773-9AE5-42DD-8C01-EC55B9FDBA3D}.Release|x64.Build.0 = Release|x64
-		{320C4AF6-1D0F-45E9-A2FA-9A19463C983F}.Debug|x64.ActiveCfg = Debug|x64
-		{320C4AF6-1D0F-45E9-A2FA-9A19463C983F}.Debug|x64.Build.0 = Debug|x64
-		{320C4AF6-1D0F-45E9-A2FA-9A19463C983F}.Release|x64.ActiveCfg = Release|x64
-		{320C4AF6-1D0F-45E9-A2FA-9A19463C983F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

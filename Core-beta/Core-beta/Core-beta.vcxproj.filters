@@ -33,12 +33,6 @@
     <ClInclude Include="Core\Player.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Status.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Interface\Action.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Interface\ConsoleInterface.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -68,12 +62,6 @@
     <ClCompile Include="Core\Player.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Core\Status.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Interface\Action.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Interface\ConsoleInterface.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -86,5 +74,9 @@
     <ClCompile Include="Card\CardFactory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Interface\Action.proto" />
+    <CustomBuild Include="Interface\Status.proto" />
   </ItemGroup>
 </Project>

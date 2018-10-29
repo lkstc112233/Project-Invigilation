@@ -5,13 +5,13 @@
 //  Created by Photon Cat on 2018/4/29.
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
+#include "../stdafx.h"
 
 #include "Player.hpp"
 #include <sstream>
 #include <string>
 #include "../Card/Card.hpp"
 #include "../Card/CardFactory.hpp"
-#include "../stdafx.h"
 #include "../utility.hpp"
 using std::unique_ptr;
 

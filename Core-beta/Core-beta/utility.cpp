@@ -5,10 +5,10 @@
 //  Created by Photon Cat on 2018/5/6.
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
+#include "stdafx.h"
 
 #include "utility.hpp"
 #include <atomic>
-#include "stdafx.h"
 
 namespace INVIGILATION_CORE {
 namespace UTILITY {

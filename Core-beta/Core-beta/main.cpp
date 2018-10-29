@@ -5,6 +5,7 @@
 //  Created by Photon Cat on 2018/5/6.
 //  Copyright © 2018 Must Studio. All rights reserved.
 //
+#include "stdafx.h"
 
 #include <fstream>
 #include <iostream>
@@ -15,7 +16,6 @@
 #include "Core/Player.hpp"
 #include "Interface/Action.pb.h"
 #include "Interface/ConsoleInterface.hpp"
-#include "stdafx.h"
 #include "utility.hpp"
 
 void deckBuildingTest() {
