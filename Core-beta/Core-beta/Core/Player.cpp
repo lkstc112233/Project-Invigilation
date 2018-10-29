@@ -7,12 +7,12 @@
 //
 #include "../stdafx.h"
 
-#include "Player.hpp"
 #include <sstream>
 #include <string>
 #include "../Card/Card.hpp"
 #include "../Card/CardFactory.hpp"
 #include "../utility.hpp"
+#include "Player.hpp"
 using std::unique_ptr;
 
 namespace INVIGILATION_CORE {

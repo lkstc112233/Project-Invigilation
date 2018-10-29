@@ -13,20 +13,22 @@
 #include "../Stringable.hpp"
 
 namespace INVIGILATION_CORE {
-    class Player;
-    class Card;
-    
-    class Core{
-    public:
-        Core();
-        virtual ~Core();
-        void createPlayers(int count = 2);
-    private:
-        std::vector<std::unique_ptr<Player>> players;
-        std::vector<std::unique_ptr<Card>> pubDeck;
-    public:
-        virtual std::string toString();
-    };
-}
+class Player;
+class Card;
+
+class Core {
+ public:
+  Core();
+  virtual ~Core();
+  void createPlayers(int count = 2);
+
+ private:
+  std::vector<std::unique_ptr<Player>> players;
+  std::vector<std::unique_ptr<Card>> pubDeck;
+
+ public:
+  virtual std::string toString();
+};
+}  // namespace INVIGILATION_CORE
 
 #endif /* Core_hpp */

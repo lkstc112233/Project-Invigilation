@@ -13,26 +13,29 @@
 
 #include "Card.hpp"
 
-namespace INVIGILATION_CORE
-{
-    /**
-     * Friend of Card.
-     * Generates Card.
-     */
-    class CardBuilder
-    {
-    public:
-        // Change a card's id to a new one.
-        // Use this to make a card a new one.
-        static void reId(Card &card);
-    private:
-        CardType typeId = ELEMENTAL;
-        std::string name = "Void";
-    public:
-        CardBuilder& setTypeId(int id);
-        CardBuilder& setName(std::string name) {this->name = name; return *this;}
-        std::unique_ptr<Card> makeCard();
-    };
-}
+namespace INVIGILATION_CORE {
+/**
+ * Friend of Card.
+ * Generates Card.
+ */
+class CardBuilder {
+ public:
+  // Change a card's id to a new one.
+  // Use this to make a card a new one.
+  static void reId(Card& card);
+
+ private:
+  CardType typeId = ELEMENTAL;
+  std::string name = "Void";
+
+ public:
+  CardBuilder& setTypeId(int id);
+  CardBuilder& setName(std::string name) {
+    this->name = name;
+    return *this;
+  }
+  std::unique_ptr<Card> makeCard();
+};
+}  // namespace INVIGILATION_CORE
 
 #endif /* CardBuilder_hpp */

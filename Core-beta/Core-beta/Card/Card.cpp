@@ -7,9 +7,9 @@
 //
 #include "../stdafx.h"
 
-#include "Card.hpp"
 #include <sstream>
 #include <string>
+#include "Card.hpp"
 
 namespace INVIGILATION_CORE {
 Card::Card() {}

@@ -7,8 +7,8 @@
 //
 #include "../stdafx.h"
 
-#include "ConsoleInterface.hpp"
 #include "Action.pb.h"
+#include "ConsoleInterface.hpp"
 
 #include <iomanip>
 #include <ios>

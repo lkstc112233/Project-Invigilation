@@ -9,31 +9,33 @@
 #ifndef Player_hpp
 #define Player_hpp
 
-#include <vector>
 #include <string>
+#include <vector>
 #include "../Stringable.hpp"
 
 namespace INVIGILATION_CORE {
-    class Card;
-    
-    class Player : public Stringable {
-    public:
-        Player(int id);
-        virtual ~Player();
-    protected:
-        long id;
-        int life;
-        int initialLife;
-        std::vector<std::unique_ptr<Card>> hand;
-        std::vector<std::unique_ptr<Card>> deck;
-    public:
-        std::vector<std::unique_ptr<Card>> loadDeck();
-        void shuffleDeck();
-        void takeCardIntoHand(std::unique_ptr<Card> card);
-        long getId() { return id; }
-        int getLife() { return life; }
-        virtual std::string toString();
-    };
-}
+class Card;
+
+class Player : public Stringable {
+ public:
+  Player(int id);
+  virtual ~Player();
+
+ protected:
+  long id;
+  int life;
+  int initialLife;
+  std::vector<std::unique_ptr<Card>> hand;
+  std::vector<std::unique_ptr<Card>> deck;
+
+ public:
+  std::vector<std::unique_ptr<Card>> loadDeck();
+  void shuffleDeck();
+  void takeCardIntoHand(std::unique_ptr<Card> card);
+  long getId() { return id; }
+  int getLife() { return life; }
+  virtual std::string toString();
+};
+}  // namespace INVIGILATION_CORE
 
 #endif /* Player_hpp */

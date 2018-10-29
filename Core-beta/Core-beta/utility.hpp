@@ -9,28 +9,28 @@
 #ifndef utility_hpp
 #define utility_hpp
 
-#include <string>
 #include <atomic>
 #include <random>
+#include <string>
 
 namespace INVIGILATION_CORE {
-    namespace UTILITY{
-        std::string& replaceAll(std::string &input, const std::string &pattern, const std::string &replacement);
-        std::string& trimEnd(std::string &input, char toRemove);
-        template<typename RandomAccessIterator>
-        void shuffle(RandomAccessIterator begin, RandomAccessIterator end)
-        {
-            extern std::mt19937 RandomDevice19937ForShuffling;
-            std::shuffle(begin, end, RandomDevice19937ForShuffling);
-        }
-        class IDGenerator
-        {
-        private:
-            static std::atomic<long> idGenerator;
-        public:
-            static long getId();
-        };
-    }
+namespace UTILITY {
+std::string &replaceAll(std::string &input, const std::string &pattern,
+                        const std::string &replacement);
+std::string &trimEnd(std::string &input, char toRemove);
+template <typename RandomAccessIterator>
+void shuffle(RandomAccessIterator begin, RandomAccessIterator end) {
+  extern std::mt19937 RandomDevice19937ForShuffling;
+  std::shuffle(begin, end, RandomDevice19937ForShuffling);
 }
+class IDGenerator {
+ private:
+  static std::atomic<long> idGenerator;
+
+ public:
+  static long getId();
+};
+}  // namespace UTILITY
+}  // namespace INVIGILATION_CORE
 
 #endif /* utility_hpp */

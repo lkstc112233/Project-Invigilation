@@ -7,8 +7,8 @@
 //
 #include "stdafx.h"
 
-#include "utility.hpp"
 #include <atomic>
+#include "utility.hpp"
 
 namespace INVIGILATION_CORE {
 namespace UTILITY {
