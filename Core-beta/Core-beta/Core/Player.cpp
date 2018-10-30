@@ -36,10 +36,10 @@ std::vector<unique_ptr<Card>> Player::loadDeck() {
   CardBuilder builder_ice;
   CardBuilder builder_aero;
   CardBuilder builder_earth;
-  builder_fire.setTypeId(0).setName("Fire");
-  builder_ice.setTypeId(0).setName("Ice");
-  builder_aero.setTypeId(0).setName("Aero");
-  builder_earth.setTypeId(0).setName("Earth");
+  builder_fire.setType(CardData::ELEMENTAL).setName("Fire");
+  builder_ice.setType(CardData::ELEMENTAL).setName("Ice");
+  builder_aero.setType(CardData::ELEMENTAL).setName("Aero");
+  builder_earth.setType(CardData::ELEMENTAL).setName("Earth");
   for (int i = 0; i < 20; ++i) {
     switch (deckId) {
       case 0:

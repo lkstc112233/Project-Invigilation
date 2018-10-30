@@ -11,18 +11,15 @@
 #include <string>
 #include "Card.hpp"
 
+#include "Card.pb.h"
+
 namespace INVIGILATION_CORE {
 Card::Card() {}
 
 Card::~Card() {}
 
-std::string getCardTypeString(CardType type) {
-  switch (type) {
-    case ELEMENTAL:
-      return "Elemental";
-    default:
-      return "Other";
-  }
+std::string getCardTypeString(CardData::Type type) {
+    return CardData::Type_Name(type);
 }
 std::string Card::toString() {
   std::ostringstream result;

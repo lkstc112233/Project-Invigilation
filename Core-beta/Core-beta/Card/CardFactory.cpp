@@ -17,13 +17,8 @@ void CardBuilder::reId(Card& card) {
   card.m_cardId = UTILITY::IDGenerator::getId();
 }
 
-CardBuilder& CardBuilder::setTypeId(int id) {
-  switch (id) {
-    case 0:
-    default:
-      typeId = ELEMENTAL;
-      break;
-  }
+CardBuilder& CardBuilder::setType(CardData::Type type) {  
+  typeId = type;
   return *this;
 }
 
@@ -31,8 +26,8 @@ unique_ptr<Card> CardBuilder::makeCard() {
   struct Shared_Card : public Card {};
   auto newCard = std::make_unique<Shared_Card>();
   newCard->m_cardId = UTILITY::IDGenerator::getId();
-  newCard->m_type = typeId;
-  newCard->m_cardName = name;
+  newCard->data.set_type(typeId);
+  newCard->data.set_name(name);
   return newCard;
 }
 }  // namespace INVIGILATION_CORE

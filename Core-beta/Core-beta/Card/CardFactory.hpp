@@ -25,11 +25,11 @@ class CardBuilder {
   static void reId(Card& card);
 
  private:
-  CardType typeId = ELEMENTAL;
+  CardData::Type typeId = CardData::ELEMENTAL;
   std::string name = "Void";
 
  public:
-  CardBuilder& setTypeId(int id);
+  CardBuilder& setType(CardData::Type id);
   CardBuilder& setName(std::string name) {
     this->name = name;
     return *this;

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package INVIGILATION_CORE;
+
+message CardData {
+    enum Type {
+        ELEMENTAL = 0;
+        SORCERY = 1;
+    };
+    
+    Type type = 1;
+    string name = 2;
+};

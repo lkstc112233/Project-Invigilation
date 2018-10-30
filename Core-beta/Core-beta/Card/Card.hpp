@@ -12,32 +12,28 @@
 #include <string>
 #include "../Stringable.hpp"
 
-namespace INVIGILATION_CORE {
-enum CardType {
-  ELEMENTAL,
-  SORCERY,
-};
+#include "Card.pb.h"
 
+namespace INVIGILATION_CORE {
 class Card : Stringable {
  public:
   friend class CardBuilder;
 
- protected:
+ private:
   Card();
 
  public:
   virtual ~Card();
 
- protected:
+ private:
   long m_cardId;
-  CardType m_type;
-  std::string m_cardName;
+  CardData data;
 
  public:
   virtual std::string toString();
   long getId() { return m_cardId; }
-  CardType getType() { return m_type; }
-  std::string getCardName() { return m_cardName; }
+  CardData::Type getType() { return data.type(); }
+  std::string getCardName() { return data.name(); }
 };
 }  // namespace INVIGILATION_CORE
 
