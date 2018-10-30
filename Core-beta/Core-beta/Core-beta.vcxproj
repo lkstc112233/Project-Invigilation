@@ -57,6 +57,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,7 +79,7 @@
       <OutputItemType>ClCompile</OutputItemType>
     </CustomBuild>
     <CustomBuild>
-      <Command>protoc -I="$(ProjectDir)%(RelativeDir)\" --cpp_out="$(ProjectDir)%(RelativeDir)\" "$(ProjectDir)%(Identity)"</Command>
+      <Command>protoc -I="$(ProjectDir)\" --cpp_out="$(ProjectDir)\" "$(ProjectDir)%(Identity)"</Command>
     </CustomBuild>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -91,6 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -99,7 +101,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <CustomBuild>
-      <Command>protoc -I="$(ProjectDir)%(RelativeDir)\" --cpp_out="$(ProjectDir)%(RelativeDir)\" "$(ProjectDir)%(Identity)"</Command>
+      <Command>protoc -I="$(ProjectDir)\" --cpp_out="$(ProjectDir)\" "$(ProjectDir)%(Identity)"</Command>
     </CustomBuild>
     <CustomBuild>
       <Message>Build Protobuf Sources</Message>
