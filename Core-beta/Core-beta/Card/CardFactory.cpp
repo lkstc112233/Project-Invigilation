@@ -17,7 +17,7 @@ void CardBuilder::reId(Card& card) {
   card.m_cardId = UTILITY::IDGenerator::getId();
 }
 
-CardBuilder& CardBuilder::setType(CardData::Type type) {  
+CardBuilder& CardBuilder::setType(CardData::Type type) {
   typeId = type;
   return *this;
 }
