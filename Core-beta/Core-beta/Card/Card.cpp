@@ -12,10 +12,15 @@
 #include <sstream>
 #include <string>
 
+#include "../utility.hpp"
+
 #include "Card.pb.h"
 
 namespace INVIGILATION_CORE {
 Card::Card() : m_cardId(UTILITY::IDGenerator::getId()) {}
+
+Card::Card(CardData datai)
+    : m_cardId(UTILITY::IDGenerator::getId()), data(datai) {}
 
 Card::~Card() {}
 
