@@ -1,5 +1,1 @@
-clang-format -i -style=Google **/*.cpp
-clang-format -i -style=Google **/*.hpp
-clang-format -i -style=Google **/**/*.cpp
-clang-format -i -style=Google **/**/*.hpp
-clang-format -i -style=Google **/**/*.proto
+find . -iname "*.cpp" -exec clang-format -i -style=Google "{}" \; -o -iname "*.proto" -exec clang-format -i -style=Google "{}" \;
