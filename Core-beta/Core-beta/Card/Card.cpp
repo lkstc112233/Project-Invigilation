@@ -14,7 +14,7 @@
 #include "Card.pb.h"
 
 namespace INVIGILATION_CORE {
-Card::Card() {}
+Card::Card() : m_cardId(UTILITY::IDGenerator::getId()) {}
 
 Card::~Card() {}
 

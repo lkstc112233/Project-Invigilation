@@ -25,7 +25,6 @@ CardBuilder& CardBuilder::setType(CardData::Type type) {
 unique_ptr<Card> CardBuilder::makeCard() {
   struct Shared_Card : public Card {};
   auto newCard = std::make_unique<Shared_Card>();
-  newCard->m_cardId = UTILITY::IDGenerator::getId();
   newCard->data.set_type(typeId);
   newCard->data.set_name(name);
   return newCard;
