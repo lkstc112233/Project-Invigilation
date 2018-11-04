@@ -7,19 +7,25 @@
 //
 #include "../stdafx.h"
 
+#include "Card.hpp"
+
 #include <sstream>
 #include <string>
-#include "Card.hpp"
+
+#include "../utility.hpp"
 
 #include "Card.pb.h"
 
 namespace INVIGILATION_CORE {
-Card::Card() {}
+Card::Card() : m_cardId(UTILITY::IDGenerator::getId()) {}
+
+Card::Card(CardData datai)
+    : m_cardId(UTILITY::IDGenerator::getId()), data(datai) {}
 
 Card::~Card() {}
 
 std::string getCardTypeString(CardData::Type type) {
-    return CardData::Type_Name(type);
+  return CardData::Type_Name(type);
 }
 std::string Card::toString() {
   std::ostringstream result;

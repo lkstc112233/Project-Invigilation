@@ -23,6 +23,7 @@ class Card : Stringable {
   Card();
 
  public:
+  Card(CardData data);
   virtual ~Card();
 
  private:
